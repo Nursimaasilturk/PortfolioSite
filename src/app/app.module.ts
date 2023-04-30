@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,8 +13,18 @@ import { ContactComponent } from './Components/Pages/contact/contact.component';
 import { HomeComponent } from './Components/Pages/home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, MainDashboardComponent, NavbarComponent, SidebarComponent, AboutComponent, ProjectComponent, ContactComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    MainDashboardComponent,
+    NavbarComponent,
+    SidebarComponent,
+    AboutComponent,
+    ProjectComponent,
+    ContactComponent,
+    HomeComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule],
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent],
 })
