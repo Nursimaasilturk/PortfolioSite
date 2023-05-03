@@ -6,3 +6,9 @@ $dark-mode-pink--color: #ff3779;
 $dark-mode-blue--color: #78f1ff;
 $header-font-family: "Bruno Ace", cursive;
 $main-font-family: "Abel", sans-serif;
+.color-blue {
+  color: $dark-mode-blue--color;
+}
+.color-pink {
+  color: $dark-mode-pink--color;
+}
