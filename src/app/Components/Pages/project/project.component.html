@@ -1,1 +1,38 @@
-<p>project works!</p>
+<div class="projects__information pl-4">
+  <h1 class="projects__information--header">Başarı ve Eğlence</h1>
+  <p class="projects__information--text">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit rem rerum
+    culpa neque impedit repellendus! Numquam beatae mollitia expedita illum,
+    iste nihil incidunt asperiores consectetur.
+  </p>
+  <button class="projects__information--button">Bütün projelere bak !</button>
+</div>
+<div class="projects__slider d-flex align-items-center justify-content-center">
+  <p-carousel
+    class="h-100 d-flex align-items-end justify-content-center"
+    [value]="slides"
+    [numVisible]="3"
+    [numScroll]="1"
+    [showIndicators]="false"
+    [responsiveOptions]="[
+      { breakpoint: '1024px', numVisible: 5, numScroll: 3 },
+      { breakpoint: '768px', numVisible: 5, numScroll: 2 },
+      { breakpoint: '560px', numVisible: 2, numScroll: 1, mouseDraggable: true }
+    ]"
+  >
+    >
+    <ng-template let-image pTemplate="item">
+      <a
+        class="project d-flex align-items-start justify-content-start flex-column text-center"
+        (click)="redirectToProjectDetail(image.id)"
+      >
+        <img class="project--image" [src]="image.src" alt="image.alt" />
+        <h4 class="project--name w-100 my-3">{{ image.name }}</h4>
+        <!-- <div class="project--button">
+          <button class="m-auto">İncele</button>
+        </div> -->
+      </a>
+    </ng-template>
+  </p-carousel>
+</div>
+<router-outlet></router-outlet>
