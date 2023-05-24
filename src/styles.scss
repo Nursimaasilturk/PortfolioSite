@@ -11,6 +11,24 @@ body {
   color: white;
   overflow: auto;
 }
+//Costom CSS General
+i.fa-html5 {
+  color: #e44d26;
+}
+i.fa-sass {
+  color: #c69;
+}
+i.fa-angular {
+  color: #dd0031;
+}
+i.fa-js {
+  color: #f0db4f;
+}
+i.fa-bootstrap {
+  color: #6f42c1;
+}
+
+//
 app-root {
   // background-image: url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
   background-image: url("https://images.unsplash.com/photo-1510906594845-bc082582c8cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1144&q=80");
@@ -76,5 +94,10 @@ app-project-detail {
   height: 100vh;
   position: fixed;
   z-index: 9999999;
-  background-color: red;
+  background: rgb(7, 7, 21);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 2rem;
 }

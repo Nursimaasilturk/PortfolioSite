@@ -1,2 +1,85 @@
 @import "../../../../assets/variables.scss";
 
+.projects-detail {
+  &__image {
+    width: 45%;
+    height: 100%;
+    background-color: rgb(22, 170, 220, 0.3);
+    border-radius: 0.7rem;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+  &__content {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    padding-top: 5rem;
+    &--title {
+      opacity: 0.4;
+    }
+    &--name {
+      font-size: 3.5rem;
+      color: $dark-mode-pink--color;
+      text-shadow: 3px -2px 8px rgba(128, 0, 0, 0.85);
+    }
+    &--desc {
+      line-height: 30px;
+    }
+    &--tech {
+      list-style: none;
+      li {
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        border-radius: 50%;
+        i {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    &--buttons {
+      width: 100%;
+      button {
+        min-width: 100px;
+        padding: 0.7rem 0.9rem;
+        margin: 0.5rem;
+        border-radius: 0.3rem;
+        font-size: 1rem;
+        color: rgb(7, 7, 21);
+        border: 1px solid $dark-mode-pink--color;
+        background-color: transparent;
+        transition: 0.4s ease-in;
+        color: $dark-mode-pink--color;
+        &:hover {
+          color: white;
+          background-color: $dark-mode-pink--color;
+        }
+      }
+      .source-code {
+        border: 1px solid $dark-mode-blue--color;
+        color: $dark-mode-blue--color;
+        background-color: transparent;
+        transition: 0.4s ease-in;
+
+        &:hover {
+          color: rgb(7, 7, 21);
+          background-color: $dark-mode-blue--color;
+        }
+      }
+    }
+    &--back-to-project {
+      position: absolute;
+      bottom: 1%;
+      left: 1%;
+      opacity: 0.4;
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      svg {
+        fill: white;
+        margin-right: 1rem;
+      }
+    }
+  }
+}
