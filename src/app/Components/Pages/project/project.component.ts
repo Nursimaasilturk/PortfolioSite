@@ -19,10 +19,12 @@ export class ProjectComponent implements OnInit {
 
   ngOnInit(): void {
     this.projects = this.service.getAllProjects();
-    console.log(this.projects);
   }
 
   redirectToProjectDetail(id: any) {
     this.router.navigate(['detail', id], { relativeTo: this.route });
+  }
+  redirectToProjectAll() {
+    this.router.navigate(['/all'], { relativeTo: this.route });
   }
 }

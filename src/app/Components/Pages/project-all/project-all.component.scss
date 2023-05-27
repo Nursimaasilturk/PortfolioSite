@@ -1,0 +1,89 @@
+@import "../../../../assets/variables.scss";
+
+.all {
+  margin: auto;
+  width: 90%;
+  height: 88%;
+  /* From https://css.glass */
+  &__filters {
+    height: 10%;
+    ul {
+      height: 80%;
+      width: 80%;
+      list-style: none;
+    }
+    &--item {
+      padding: 0.4rem 0.9rem;
+      min-width: 90px;
+      background-color: $dark-mode-pink--color;
+      border-radius: 0.3rem;
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+  &__projects {
+    width: 95%;
+    height: 85%;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &--card {
+      position: relative;
+      width: 280px;
+      height: 350px;
+      border-radius: 0.4rem;
+      background-color: aqua;
+      overflow: hidden;
+      cursor: pointer;
+      &-image {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
+      &-title {
+        position: absolute;
+        bottom: 5%;
+        left: 30%;
+        color: white;
+      }
+    }
+  }
+}
+.html-css {
+  background: hsla(18, 87%, 55%, 1);
+
+  background: linear-gradient(
+    315deg,
+    hsla(18, 87%, 55%, 1) 36%,
+    hsla(228, 78%, 52%, 1) 56%
+  );
+
+  background: -moz-linear-gradient(
+    315deg,
+    hsla(18, 87%, 55%, 1) 36%,
+    hsla(228, 78%, 52%, 1) 56%
+  );
+
+  background: -webkit-linear-gradient(
+    315deg,
+    hsla(18, 87%, 55%, 1) 36%,
+    hsla(228, 78%, 52%, 1) 56%
+  );
+}
+.sass {
+  background-color: #cc6699;
+}
+.js {
+  background-color: #f0db4f;
+}
+.ts {
+  background-color: #007acc;
+}
+.angular {
+  background-color: #b52e31;
+}

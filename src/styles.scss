@@ -15,6 +15,9 @@ body {
 i.fa-html5 {
   color: #e44d26;
 }
+i.fa-css3 {
+  color: #2965f1;
+}
 i.fa-sass {
   color: #c69;
 }
@@ -87,17 +90,25 @@ app-project {
   padding: 2rem;
   justify-content: space-between;
 }
-app-project-detail {
+app-project-detail,
+app-project-all {
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 9999999;
   background: rgb(7, 7, 21);
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
-  flex-direction: row;
+}
+app-project-detail {
+  z-index: 99;
   padding: 2rem;
+  flex-direction: row;
+  justify-content: space-between;
+}
+app-project-all {
+  z-index: 9;
+  flex-direction: column;
+  justify-content: flex-start;
 }

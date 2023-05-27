@@ -1,0 +1,57 @@
+<app-navbar
+  class="d-flex w-100 align-items-center justify-content-between"
+></app-navbar>
+<section class="all">
+  <div class="all__filters d-flex align-items-center justify-content-center">
+    <ul
+      class="d-flex flex-row px-5 align-items-center justify-content-between m-auto"
+    >
+      <li
+        class="all__filters--item text-center"
+        (click)="getProjectsByFilter('all')"
+      >
+        <a> All</a>
+      </li>
+      <li
+        (click)="getProjectsByFilter('css')"
+        class="all__filters--item text-center html-css"
+      >
+        <a> HTML/CSS</a>
+      </li>
+      <li
+        (click)="getProjectsByFilter('sass')"
+        class="all__filters--item text-center sass"
+      >
+        <a>SCSS</a>
+      </li>
+      <li
+        (click)="getProjectsByFilter('js')"
+        class="all__filters--item text-center js"
+      >
+        <a>JS</a>
+      </li>
+      <li
+        (click)="getProjectsByFilter('ts')"
+        class="all__filters--item text-center ts"
+      >
+        <a>TS</a>
+      </li>
+      <li
+        (click)="getProjectsByFilter('angular')"
+        class="all__filters--item text-center angular"
+      >
+        <a> ANGULAR</a>
+      </li>
+    </ul>
+  </div>
+  <div class="all__projects d-flex flex-wrap justify-content-evenly m-auto">
+    <a
+      (click)="redirectToDetail(project.id)"
+      class="all__projects--card m-2"
+      *ngFor="let project of filteredProjects"
+    >
+      <img class="all__projects--card-image" [src]="project.src" alt="" />
+      <h2 class="all__projects--card-title">{{ project.name }}</h2>
+    </a>
+  </div>
+</section>

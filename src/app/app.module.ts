@@ -15,6 +15,7 @@ import { ProjectComponent } from './Components/Pages/project/project.component';
 import { ContactComponent } from './Components/Pages/contact/contact.component';
 import { HomeComponent } from './Components/Pages/home/home.component';
 import { ProjectDetailComponent } from './Components/Pages/project-detail/project-detail.component';
+import { ProjectAllComponent } from './Components/Pages/project-all/project-all.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ProjectDetailComponent } from './Components/Pages/project-detail/projec
     ContactComponent,
     HomeComponent,
     ProjectDetailComponent,
+    ProjectAllComponent,
   ],
   imports: [
     BrowserModule,
