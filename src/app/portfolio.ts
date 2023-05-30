@@ -10,3 +10,7 @@ export interface Project {
   githubUrl: string;
   netlifyUrl: string;
 }
+export interface Lang {
+  en: string;
+  tr: string;
+}

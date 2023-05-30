@@ -16,6 +16,9 @@ import { ContactComponent } from './Components/Pages/contact/contact.component';
 import { HomeComponent } from './Components/Pages/home/home.component';
 import { ProjectDetailComponent } from './Components/Pages/project-detail/project-detail.component';
 import { ProjectAllComponent } from './Components/Pages/project-all/project-all.component';
+import { LangComponent } from './Components/Common/lang/lang.component';
+import { GlobalService } from './global.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,7 @@ import { ProjectAllComponent } from './Components/Pages/project-all/project-all.
     HomeComponent,
     ProjectDetailComponent,
     ProjectAllComponent,
+    LangComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,9 +40,10 @@ import { ProjectAllComponent } from './Components/Pages/project-all/project-all.
     BrowserAnimationsModule,
     ButtonModule,
     CarouselModule,
+    FormsModule,
   ],
   exports: [RouterModule],
-  providers: [],
+  providers: [GlobalService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
