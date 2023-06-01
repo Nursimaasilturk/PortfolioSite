@@ -9,22 +9,17 @@
       />
     </div>
     <div class="about__introduction--text">
-      <h1 class="color-pink">Ben Sima</h1>
+      <h1 class="color-pink">{{ getLocalText("About", "name") }}</h1>
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, nulla.
-        Ab alias, dolore blanditiis ea impedit voluptas! Vel beatae, nulla rem
-        enim asperiores magnam qui, facere eligendi, aliquam laborum inventore
-        cum numquam fugit dolores esse. Nesciunt dolores dolorem qui
-        perspiciatis! Eos sunt similique magni quod fugit perspiciatis nobis
-        repellat sequi dolore officia recusandae laboriosam ducimus totam odio,
-        dignissimos quia cum aut ullam eaque, nesciunt tempora corrupti.
-        Provident pariatur harum quo.
+        {{ getLocalText("About", "description") }}
       </p>
     </div>
   </div>
   <div class="about__experiance my-5">
     <div class="about__experiance-content my-3 p-3">
-      <h2 class="about__experiance-content--header color-blue mb-3">Deneyim</h2>
+      <h2 class="about__experiance-content--header color-blue mb-3">
+        {{ getLocalText("About", "experience")["name"] }}
+      </h2>
       <div
         class="about__experiance-content--text d-flex align-items-center justify-content-start flex-row"
       >

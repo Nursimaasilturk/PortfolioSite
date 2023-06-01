@@ -1,0 +1,164 @@
+{
+  "tr": {
+    "Navbar": {
+      "cvButton": "CV İndir"
+    },
+    "Contact": {
+      "header": "İletişime Geçelim",
+      "description": "İşbirliği yapmak, sorularınızı sormak veya herhangi bir konuda geri bildirimde bulunmak için bu bölümü kullanabilirsiniz. Size en kısa sürede yanıt vermeye çalışacağım ve iletişiminiz benim için değerlidir. İletişim formunu doldurarak adınızı, e-posta adresinizi ve mesajınızı bana iletebilirsiniz. İyi bir işbirliği için sabırsızlıkla bekliyorum!",
+      "mailBox": "Lütfen, benle iletişime geçin!"
+    },
+    "About": {
+      "name": "Ben Sima",
+      "description": "Ben ChatGPT, OpenAI tarafından geliştirilen bir yapay zeka dil modeliyim. Büyük ölçüde doğal dil işleme ve anlayış kabiliyetine sahibim. Amacım, kullanıcılara çeşitli konularda yardımcı olmak, bilgi sağlamak ve soruları yanıtlamaktır. Metinleri okuyabilirim, anlayabilirim ve buna dayanarak yanıtlar üretebilirim. Geniş bir bilgi tabanına dayanarak çeşitli konularda bilgi ve tavsiye sunabilirim. Ancak, duygusal veya bilinçli bir varlık değilim ve sadece metin tabanlı girdilerle çalışırım. Günlük hayatta kullanıcıların her türlü sorusuna yardımcı olabilmek için geliştirildim.",
+      "experience": {
+        "name": "Deneyim",
+        "item": [
+          {
+            "text": "Şirket X - Yazılım Mühendisi",
+            "date": "14-09-2022"
+          },
+          {
+            "text": "Google - UX Tasarımcı",
+            "date": "14-09-2018"
+          }
+        ]
+      },
+      "education": {
+        "name": "Eğitim",
+        "item": [
+          {
+            "text": "Karabük Üniversitesi Bilgisayar Mühendisliği",
+            "date": "2019-2024"
+          },
+          {
+            "text": "Nene Hatun Kız Meslek Anadolu Lisesi",
+            "date": "2013-2017"
+          }
+        ]
+      },
+      "skill": {
+        "name": "Beceriler",
+        "item": [
+          {
+            "name": "Yazılım",
+            "softwareSkill": [
+              {
+                "name": "HTML",
+                "perc": "95%"
+              },
+              {
+                "name": "CSS",
+                "perc": "95%"
+              },
+              {
+                "name": "JS",
+                "perc": "95%"
+              },
+              {
+                "name": "Angular",
+                "perc": "95%"
+              },
+              {
+                "name": "Sass",
+                "perc": "95%"
+              }
+            ]
+          },
+          {
+            "name": "Dil",
+            "languageSkill": [
+              {
+                "name": "İngilizce - Orta Düzeyde"
+              },
+              {
+                "name": "Türkçe - Anadil"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "en": {
+    "Navbar": {
+      "cvButton": "Download CV"
+    },
+    "Contact": {
+      "header": "Let's Get in Touch",
+      "description": "You can use this section to collaborate, ask questions, or provide feedback on any topic. I will try to respond to you as soon as possible, and your communication is valuable to me. You can submit your name, email address, and message to me by filling out the contact form. I am looking forward to a fruitful collaboration!",
+      "mailBox": "Please, contact me!"
+    },
+    "About": {
+      "name": "I'm Sima",
+      "description": "I am ChatGPT, an artificial intelligence language model developed by OpenAI. I possess a strong capability in natural language processing and understanding. My purpose is to assist users by providing help, information, and answering questions on various topics. I can read and comprehend text, and based on that, generate responses. With a wide knowledge base, I can offer information and advice on various subjects. However, it's important to note that I am not a sentient or conscious entity, but rather an AI model that operates based on text-based inputs. I was designed to assist users with a wide range of inquiries in their day-to-day life.",
+      "experience": {
+        "name": "Experience",
+        "item": [
+          {
+            "text": "Company X - Software Engineer",
+            "date": "14-09-2022"
+          },
+          {
+            "text": "Google - UX Designer",
+            "date": "14-09-2018"
+          }
+        ]
+      },
+      "education": {
+        "name": "Education",
+        "item": [
+          {
+            "text": "Karabük University Computer Engineering",
+            "date": "2019-2024"
+          },
+          {
+            "text": "Nene Hatun Girls Vocational Anatolian High School",
+            "date": "2013-2017"
+          }
+        ]
+      },
+      "skill": {
+        "name": "Skills",
+        "item": [
+          {
+            "name": "Software",
+            "softwareSkill": [
+              {
+                "name": "HTML",
+                "perc": "95%"
+              },
+              {
+                "name": "CSS",
+                "perc": "95%"
+              },
+              {
+                "name": "JS",
+                "perc": "95%"
+              },
+              {
+                "name": "Angular",
+                "perc": "95%"
+              },
+              {
+                "name": "Sass",
+                "perc": "95%"
+              }
+            ]
+          },
+          {
+            "name": "Language",
+            "languageSkill": [
+              {
+                "name": "English - Intermediate"
+              },
+              {
+                "name": "Turkish - Native"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
