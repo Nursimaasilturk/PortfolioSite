@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { GlobalService } from 'src/app/global.service';
+import { ProjectService } from 'src/app/project.service';
 
 @Component({
   selector: 'app-about',
@@ -10,19 +11,34 @@ import { GlobalService } from 'src/app/global.service';
 export class AboutComponent implements OnInit {
   data: any;
   changedLang: string = ' ';
-  constructor(private http: HttpClient, private globalService: GlobalService) {}
+  langTextPage: any;
+  dynamicParam!: string;
+  public items!: any[];
+  constructor(
+    private http: HttpClient,
+    private gService: GlobalService,
+    private pService: ProjectService
+  ) {}
 
   ngOnInit(): void {
-    this.globalService.selectedLang$.subscribe((value) => {
+    this.gService.selectedLang$.subscribe((value) => {
       this.changedLang = value;
     });
     this.http.get<any>('assets/data.json').subscribe((data) => {
       this.data = data;
     });
+    this.langTextPage = this.pService.getLangItemByPage('about');
+    this.items = this.getLocalText(this.dynamicParam);
   }
-  getLocalText(page: any, key: any) {
+  getLocalText(key: any) {
     return this.data != undefined
-      ? this.data[this.changedLang][page][key]
+      ? this.gService.getItemFound(
+          this.gService.getSeperateItem(
+            this.changedLang,
+            this.langTextPage[key]
+          ),
+          this.data
+        )
       : 'loading';
   }
 }

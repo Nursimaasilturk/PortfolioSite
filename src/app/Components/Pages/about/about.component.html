@@ -9,19 +9,21 @@
       />
     </div>
     <div class="about__introduction--text">
-      <h1 class="color-pink">{{ getLocalText("About", "name") }}</h1>
+      <h1 class="color-pink">{{ getLocalText("name") }}</h1>
       <p>
-        {{ getLocalText("About", "description") }}
+        {{ getLocalText("desc") }}
       </p>
     </div>
   </div>
   <div class="about__experiance my-5">
     <div class="about__experiance-content my-3 p-3">
       <h2 class="about__experiance-content--header color-blue mb-3">
-        {{ getLocalText("About", "experience")["name"] }}
+        {{ getLocalText("experienceHeader") }}
       </h2>
+
       <div
         class="about__experiance-content--text d-flex align-items-center justify-content-start flex-row"
+        *ngFor="let item of getLocalText('experienceItem')"
       >
         <div
           class="about__experiance-content--text-icon color-blue mr-3 d-flex align-items-center justify-content-center"
@@ -29,30 +31,18 @@
           <i class="fa-solid fa-location-dot"></i>
         </div>
         <p class="about__experiance-content--text-information mr-5">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
-          facilis.
+          {{ item.text }}
         </p>
-        <p class="about__experiance-content--text-date">14-09-2007</p>
-      </div>
-      <div
-        class="about__experiance-content--text d-flex align-items-center justify-content-start flex-row"
-      >
-        <div
-          class="about__experiance-content--text-icon color-blue mr-3 d-flex align-items-center justify-content-center"
-        >
-          <i class="fa-solid fa-location-dot"></i>
-        </div>
-        <p class="about__experiance-content--text-information mr-5">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
-          facilis.
-        </p>
-        <p class="about__experiance-content--text-date">14-09-2007</p>
+        <p class="about__experiance-content--text-date">{{ item.date }}</p>
       </div>
     </div>
     <div class="about__experiance-content my-3 p-3">
-      <h2 class="about__experiance-content--header color-blue mb-3">Eğitim</h2>
+      <h2 class="about__experiance-content--header color-blue mb-3">
+        {{ getLocalText("educationHeader") }}
+      </h2>
       <div
         class="about__experiance-content--text d-flex align-items-center justify-content-start flex-row"
+        *ngFor="let item of getLocalText('educationItem')"
       >
         <div
           class="about__experiance-content--text-icon color-blue mr-3 d-flex align-items-center justify-content-center"
@@ -60,24 +50,9 @@
           <i class="fa-solid fa-location-dot"></i>
         </div>
         <p class="about__experiance-content--text-information mr-5">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
-          facilis.
+          {{ item.text }}
         </p>
-        <p class="about__experiance-content--text-date">14-09-2007</p>
-      </div>
-      <div
-        class="about__experiance-content--text d-flex align-items-center justify-content-start flex-row"
-      >
-        <div
-          class="about__experiance-content--text-icon color-blue mr-3 d-flex align-items-center justify-content-center"
-        >
-          <i class="fa-solid fa-location-dot"></i>
-        </div>
-        <p class="about__experiance-content--text-information mr-5">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
-          facilis.
-        </p>
-        <p class="about__experiance-content--text-date">14-09-2007</p>
+        <p class="about__experiance-content--text-date">{{ item.date }}</p>
       </div>
     </div>
   </div>

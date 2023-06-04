@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalService } from 'src/app/global.service';
 import { HttpClient } from '@angular/common/http';
+import { ProjectService } from 'src/app/project.service';
 
 @Component({
   selector: 'app-contact',
@@ -10,19 +11,31 @@ import { HttpClient } from '@angular/common/http';
 export class ContactComponent implements OnInit {
   data: any;
   changedLang: string = '';
-  constructor(private globalService: GlobalService, private http: HttpClient) {}
+  langTextPage: any;
+  constructor(
+    private gService: GlobalService,
+    private http: HttpClient,
+    private pService: ProjectService
+  ) {}
   ngOnInit(): void {
-    this.globalService.selectedLang$.subscribe((value) => {
+    this.gService.selectedLang$.subscribe((value) => {
       this.changedLang = value;
     });
     this.http.get<any>('assets/data.json').subscribe((data) => {
       this.data = data;
     });
+    this.langTextPage = this.pService.getLangItemByPage('contact');
   }
 
-  getLocalText(page: any, key: any) {
+  getLocalText(key: any) {
     return this.data != undefined
-      ? this.data[this.changedLang][page][key]
+      ? this.gService.getItemFound(
+          this.gService.getSeperateItem(
+            this.changedLang,
+            this.langTextPage[key]
+          ),
+          this.data
+        )
       : 'loading';
   }
 }

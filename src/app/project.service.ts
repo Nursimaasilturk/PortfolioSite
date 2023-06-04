@@ -111,6 +111,24 @@ export class ProjectService {
       netlifyUrl: 'https://awatch.netlify.app/',
     },
   ];
+  protected langTextAllPages: { [key: string]: object } = {
+    navbar: {
+      download: 'Navbar.cvButton',
+    },
+    contact: {
+      header: 'Contact.header',
+      desc: 'Contact.description',
+      mail: 'Contact.mailBox',
+    },
+    about: {
+      name: 'About.name',
+      desc: 'About.description',
+      experienceHeader: 'About.experience.name',
+      experienceItem: 'About.experience.item',
+      educationHeader: 'About.education.name',
+      educationItem: 'About.education.item',
+    },
+  };
   constructor() {}
 
   // All projects
@@ -119,5 +137,9 @@ export class ProjectService {
   }
   getProjectById(id: Number): Project | undefined {
     return this.projectList.find((project) => project.id == id);
+  }
+  getLangItemByPage(page: string): any {
+    const langItem = this.langTextAllPages[page];
+    return langItem;
   }
 }

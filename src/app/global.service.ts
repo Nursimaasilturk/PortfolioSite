@@ -14,5 +14,24 @@ export class GlobalService {
   setSelectedLang(value: string) {
     this.selectedLang.next(value);
   }
-  // her compoenentte kullanılan dil değiştişrime observable dinleme
+  // girilen texti ayırma
+  getSeperateItem(lang: string, text: string): string[] {
+    const arr: string[] = text.split('.');
+    arr.unshift(lang);
+    return arr;
+  }
+  // texte göre objeden veri getirme
+  getItemFound(arr: string[], obj: { [key: string]: any }): any {
+    let object: { [key: string]: any } = obj;
+    for (let i = 0; i < arr.length; i++) {
+      if (typeof object[arr[i]] === 'object' && object[arr[i]] !== null) {
+        object = object[arr[i]];
+      } else if (Array.isArray(object[arr[i]])) {
+        object = object[arr[i]];
+      } else {
+        object = object[arr[i]];
+      }
+    }
+    return object;
+  }
 }
