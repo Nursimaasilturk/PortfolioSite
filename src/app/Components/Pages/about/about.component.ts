@@ -12,8 +12,6 @@ export class AboutComponent implements OnInit {
   data: any;
   changedLang: string = ' ';
   langTextPage: any;
-  dynamicParam!: string;
-  public items!: any[];
   constructor(
     private http: HttpClient,
     private gService: GlobalService,
@@ -28,7 +26,6 @@ export class AboutComponent implements OnInit {
       this.data = data;
     });
     this.langTextPage = this.pService.getLangItemByPage('about');
-    this.items = this.getLocalText(this.dynamicParam);
   }
   getLocalText(key: any) {
     return this.data != undefined

@@ -39,45 +39,50 @@
       },
       "skill": {
         "name": "Beceriler",
-        "item": [
-          {
-            "name": "Yazılım",
-            "softwareSkill": [
-              {
-                "name": "HTML",
-                "perc": "95%"
-              },
-              {
-                "name": "CSS",
-                "perc": "95%"
-              },
-              {
-                "name": "JS",
-                "perc": "95%"
-              },
-              {
-                "name": "Angular",
-                "perc": "95%"
-              },
-              {
-                "name": "Sass",
-                "perc": "95%"
-              }
-            ]
-          },
-          {
-            "name": "Dil",
-            "languageSkill": [
-              {
-                "name": "İngilizce - Orta Düzeyde"
-              },
-              {
-                "name": "Türkçe - Anadil"
-              }
-            ]
-          }
-        ]
+        "software": {
+          "name": "Yazılım",
+          "softwareSkill": [
+            {
+              "name": "HTML",
+              "perc": "95%"
+            },
+            {
+              "name": "CSS",
+              "perc": "95%"
+            },
+            {
+              "name": "JS",
+              "perc": "95%"
+            },
+            {
+              "name": "Angular",
+              "perc": "95%"
+            },
+            {
+              "name": "Sass",
+              "perc": "95%"
+            }
+          ]
+        },
+        "language": {
+          "name": "Dil",
+          "languageSkill": [
+            {
+              "name": "İngilizce",
+              "level": "Orta Düzey"
+            },
+            {
+              "name": "Türkçe",
+              "level": "Anadil"
+            }
+          ]
+        }
       }
+    },
+    "Projects": {
+      "header": "Başarı ve Eğlence",
+      "desc": " Benzersiz tasarımlar, güçlü marka kimliği ve kullanıcı dostu arayüzlerle projelerinizi öne çıkarıyoruz.",
+      "button": "Bütün projelere bak!"
     }
   },
   "en": {
@@ -120,45 +125,50 @@
       },
       "skill": {
         "name": "Skills",
-        "item": [
-          {
-            "name": "Software",
-            "softwareSkill": [
-              {
-                "name": "HTML",
-                "perc": "95%"
-              },
-              {
-                "name": "CSS",
-                "perc": "95%"
-              },
-              {
-                "name": "JS",
-                "perc": "95%"
-              },
-              {
-                "name": "Angular",
-                "perc": "95%"
-              },
-              {
-                "name": "Sass",
-                "perc": "95%"
-              }
-            ]
-          },
-          {
-            "name": "Language",
-            "languageSkill": [
-              {
-                "name": "English - Intermediate"
-              },
-              {
-                "name": "Turkish - Native"
-              }
-            ]
-          }
-        ]
+        "software": {
+          "name": "Software",
+          "softwareSkill": [
+            {
+              "name": "HTML",
+              "perc": "95%"
+            },
+            {
+              "name": "CSS",
+              "perc": "95%"
+            },
+            {
+              "name": "JS",
+              "perc": "95%"
+            },
+            {
+              "name": "Angular",
+              "perc": "95%"
+            },
+            {
+              "name": "Sass",
+              "perc": "95%"
+            }
+          ]
+        },
+        "language": {
+          "name": "Language",
+          "languageSkill": [
+            {
+              "name": "English",
+              "level": "Intermediate"
+            },
+            {
+              "name": "Turkish",
+              "level": "Native"
+            }
+          ]
+        }
       }
+    },
+    "Projects": {
+      "header": "Success and Entertainment",
+      "desc": "We highlight your projects with unique designs, strong brand identity, and user-friendly interfaces.",
+      "button": "View All Projects!"
     }
   }
 }

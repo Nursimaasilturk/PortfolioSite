@@ -1,12 +1,10 @@
 <div class="projects__information pl-4">
-  <h1 class="projects__information--header">Başarı ve Eğlence</h1>
+  <h1 class="projects__information--header">{{ getLocalText("header") }}</h1>
   <p class="projects__information--text">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit rem rerum
-    culpa neque impedit repellendus! Numquam beatae mollitia expedita illum,
-    iste nihil incidunt asperiores consectetur.
+    {{ getLocalText("desc") }}
   </p>
   <a class="projects__information--button" [routerLink]="['./all']">
-    Bütün projelere bak !
+    {{ getLocalText("button") }}
   </a>
 </div>
 <div class="projects__slider d-flex align-items-center justify-content-center">

@@ -127,6 +127,16 @@ export class ProjectService {
       experienceItem: 'About.experience.item',
       educationHeader: 'About.education.name',
       educationItem: 'About.education.item',
+      skillHeader: 'About.skill.name',
+      skillSoftware: 'About.skill.software.name',
+      skillSoftwareItem: 'About.skill.software.softwareSkill',
+      skillLanguage: 'About.skill.language.name',
+      skillLanguageItem: 'About.skill.language.languageSkill',
+    },
+    projects: {
+      header: 'Projects.header',
+      desc: 'Projects.desc',
+      button: 'Projects.button',
     },
   };
   constructor() {}
