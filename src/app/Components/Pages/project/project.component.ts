@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./project.component.scss'],
 })
 export class ProjectComponent implements OnInit {
-  projects: Project[] = [];
+  projects!: Project[];
   data: any;
   changedLang: string = ' ';
   langTextPage: any;
@@ -24,12 +24,12 @@ export class ProjectComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.projects = this.service.getAllProjects();
     this.gService.selectedLang$.subscribe((value) => {
       this.changedLang = value;
     });
     this.http.get<any>('assets/data.json').subscribe((data) => {
       this.data = data;
+      this.projects = this.getLocalText('projectD');
     });
     this.langTextPage = this.service.getLangItemByPage('projects');
   }

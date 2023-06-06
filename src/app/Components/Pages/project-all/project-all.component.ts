@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ProjectService } from 'src/app/project.service';
 import { Project } from 'src/app/portfolio';
+import { GlobalService } from 'src/app/global.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-project-all',
@@ -11,11 +13,27 @@ import { Project } from 'src/app/portfolio';
 export class ProjectAllComponent implements OnInit {
   allProjects: Project[] = [];
   filteredProjects: Project[] = [];
-  constructor(private service: ProjectService, private router: Router) {}
+  data: any;
+  changedLang: string = ' ';
+  langTextPage: any;
+  resultArr!: [];
+  constructor(
+    private service: ProjectService,
+    private router: Router,
+    private gService: GlobalService,
+    private http: HttpClient
+  ) {}
 
   ngOnInit(): void {
-    this.allProjects = this.service.getAllProjects();
-    this.filteredProjects = this.allProjects;
+    this.gService.selectedLang$.subscribe((value) => {
+      this.changedLang = value;
+    });
+    this.http.get<any>('assets/data.json').subscribe((data) => {
+      this.data = data;
+      this.allProjects = this.getLocalText('projectD');
+      this.filteredProjects = this.allProjects;
+    });
+    this.langTextPage = this.service.getLangItemByPage('projects');
   }
   getProjectsByFilter(filter: any) {
     if (filter == 'all') this.filteredProjects = this.allProjects;
@@ -26,5 +44,16 @@ export class ProjectAllComponent implements OnInit {
   }
   redirectToDetail(id: any) {
     this.router.navigate(['/projects/detail', id]);
+  }
+  getLocalText(key: any) {
+    return this.data != undefined
+      ? this.gService.getItemFound(
+          this.gService.getSeperateItem(
+            this.changedLang,
+            this.langTextPage[key]
+          ),
+          this.data
+        )
+      : 'loading';
   }
 }

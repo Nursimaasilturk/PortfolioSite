@@ -1,36 +1,40 @@
-<div class="projects-detail__image">
-  <img [src]="detailProject.src" [alt]="detailProject.alt" />
+<div *ngIf="!projectDetails">Loading...</div>
+<div *ngIf="projectDetails" class="projects-detail__image">
+  <img [src]="projectDetails.src" [alt]="projectDetails.alt" />
 </div>
-<div class="projects-detail__content d-flex flex-column">
+<div *ngIf="projectDetails" class="projects-detail__content d-flex flex-column">
   <p class="projects-detail__content--title">Front-end Developer</p>
-  <h1 class="projects-detail__content--name">{{ detailProject.name }}</h1>
+  <h1 class="projects-detail__content--name">{{ projectDetails.name }}</h1>
 
   <p class="projects-detail__content--desc">
-    {{ detailProject.description }}
+    {{ projectDetails.description }}
   </p>
   <ul
     class="projects-detail__content--tech d-flex align-items-center p-0 my-4 flex-row"
   >
     <li
-      *ngFor="let tech of detailProject.usageTech"
+      *ngFor="let tech of projectDetails.usageTech"
       class="d-flex mx-3 align-items-center justify-content-center"
     >
       <i class="fa-brands" [ngClass]="tech.icon"></i>
     </li>
   </ul>
   <div class="projects-detail__content--buttons m-3">
-    <button class="mx-3" (click)="goToLiveUrl(detailProject.netlifyUrl)">
-      Canlı
+    <button class="mx-3" (click)="goToLiveUrl(projectDetails.netlifyUrl)">
+      {{ getLocalText("liveBtn") }}
     </button>
     <button
       class="mx-3 source-code"
-      (click)="goToSourceUrl(detailProject.githubUrl)"
+      (click)="goToSourceUrl(projectDetails.githubUrl)"
     >
-      Source Kod
+      {{ getLocalText("sourceBtn") }}
     </button>
   </div>
   <div class="projects-detail__content--back-to-project m-3">
-    <a (click)="redirectToAllProjects()" class="projects-detail__content--back-to-project-link">
+    <a
+      (click)="redirectToAllProjects()"
+      class="projects-detail__content--back-to-project-link"
+    >
       <svg
         width="24"
         height="24"
@@ -42,7 +46,7 @@
           d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z"
         />
       </svg>
-      Go to Projects
+      {{ getLocalText("link") }}
     </a>
   </div>
 </div>

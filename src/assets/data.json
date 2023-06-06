@@ -83,6 +83,116 @@
       "header": "Başarı ve Eğlence",
       "desc": " Benzersiz tasarımlar, güçlü marka kimliği ve kullanıcı dostu arayüzlerle projelerinizi öne çıkarıyoruz.",
       "button": "Bütün projelere bak!"
+    },
+    "ProjectDetail": {
+      "live": "Canlı",
+      "source": "Kaynak Kod",
+      "link": "Projelerime Git!",
+      "projects": [
+        {
+          "id": 1,
+          "src": "assets/img/sass-one-page.png",
+          "subImg": null,
+          "alt": "SASS One Page",
+          "name": "SASS One Page",
+          "usageTech": [
+            {
+              "name": "html",
+              "icon": "fa-html5"
+            },
+            {
+              "name": "scss",
+              "icon": "fa-sass"
+            }
+          ],
+          "mainTech": "sass",
+          "description": "Modern web tasarımında gereken dinamik ve etkileyici kullanıcı deneyimleri oluşturmak için SASS (Syntactically Awesome Style Sheets) teknolojisi kullanılarak geliştirilmiş tek sayfalık bir proje. SASS'ın güçlü yetenekleri, modüler ve ölçeklenebilir CSS kodu oluşturmaya olanak sağlarken, tek sayfalık yapısı hızlı ve sorunsuz gezinme sunar. Kullanıcı dostu arayüz tasarımı, animasyonlar, geçiş efektleri ve yenilikçi kullanıcı etkileşimleri, projeniz için özelleştirme ve esneklik sunar. Tek Sayfalık SASS Projesi, modern web trendlerini takip eden etkileyici ve yüksek performanslı bir çözüm sunar.",
+          "githubUrl": "https://github.com/Nursimaasilturk/SCSS-OnePage",
+          "netlifyUrl": "https://sima-scss-one-page.netlify.app/"
+        },
+        {
+          "id": 2,
+          "src": "assets/img/found-capital.png",
+          "subImg": null,
+          "alt": "FoundCapital",
+          "name": "Found Capital",
+          "usageTech": [
+            {
+              "name": "html",
+              "icon": "fa-html5"
+            },
+            {
+              "name": "css",
+              "icon": "fa-css3"
+            },
+            {
+              "name": "js",
+              "icon": "fa-js"
+            },
+            {
+              "name": "bootstrap",
+              "icon": "fa-bootstrap"
+            }
+          ],
+          "mainTech": "js",
+          "description": "Discover Capitals, küresel coğrafyayı keşfetmenin heyecan verici bir yoludur. Bu oyun, dünya haritasında farklı ülkelerin başkentlerini bulmak ve eşleştirmek için zamanla yarıştığınızda dikkatinizi ve hızınızı test eder. Kültürel bilginizi geliştirirken zorlu ve eğlenceli bir deneyime hazırlanın. Discover Capitals, görsel zenginlikleri, kullanıcı dostu arayüzü ve çeşitli zorluk seviyeleri ile sizi bekliyor. Ülkelerin başkentlerini keşfetmek için hızlı düşünme ve doğru cevapları bulma becerinizi kullanın. Coğrafya bilginizi test edin, kendi rekorlarınızı kırın ve arkadaşlarınızla yarışın. Bu oyunda yeni ülkeler keşfedecek, kültürel çeşitlilik deneyimleyecek ve dünya genelindeki başkentlerin heyecan verici dünyasına dalacaksınız. Hazır mısınız? Başkentlerinizi hızlı bir şekilde bulmaya başlayın ve unutulmaz bir yolculuğa çıkın!",
+          "githubUrl": "https://github.com/Nursimaasilturk/foundTheCapital-js",
+          "netlifyUrl": "https://found-the-capital-js.netlify.app/"
+        },
+        {
+          "id": 3,
+          "src": "assets/img/moonLight.png",
+          "subImg": null,
+          "alt": "moonLight",
+          "name": "Moonlight",
+          "usageTech": [
+            {
+              "name": "html",
+              "icon": "fa-html5"
+            },
+            {
+              "name": "css",
+              "icon": "fa-sass"
+            },
+            {
+              "name": "js",
+              "icon": "fa-js"
+            }
+          ],
+          "mainTech": "js",
+          "description": "Paralaks etkisiyle tasarladığımız tek sayfalık projemiz sizi büyüleyici bir deneyime davet ediyor. Sayfayı kaydırdıkça katmanlar arasında derinlik hissi yaratır ve içeriği keşfederken etkileyici bir yolculuğa çıkarır. Modern tasarımı ve akıcı geçişleriyle öne çıkan bu projeyi deneyimleyin.",
+          "githubUrl": "https://ayisigi.netlify.app/",
+          "netlifyUrl": "https://ayisigi.netlify.app/"
+        },
+        {
+          "id": 4,
+          "src": "assets/img/awatch.png",
+          "subImg": null,
+          "alt": "awatch",
+          "name": "Awatch",
+          "usageTech": [
+            {
+              "name": "html",
+              "icon": "fa-html5"
+            },
+            {
+              "name": "css",
+              "icon": "fa-css3"
+            },
+            {
+              "name": "js",
+              "icon": "fa-js"
+            }
+          ],
+          "mainTech": "css",
+          "description": "Paralaks etkisiyle tasarladığımız tek sayfalık projemiz sizi büyüleyici bir deneyime davet ediyor. Sayfayı kaydırdıkça katmanlar arasında derinlik hissi yaratır ve içeriği keşfederken etkileyici bir yolculuğa çıkarır. Modern tasarımı ve akıcı geçişleriyle öne çıkan bu projeyi deneyimleyin.",
+          "githubUrl": "https://github.com/Nursimaasilturk/AWatch",
+          "netlifyUrl": "https://awatch.netlify.app/"
+        }
+      ]
+    },
+    "ProjectAll": {
+      "all": "Hepsi"
     }
   },
   "en": {
@@ -169,6 +279,116 @@
       "header": "Success and Entertainment",
       "desc": "We highlight your projects with unique designs, strong brand identity, and user-friendly interfaces.",
       "button": "View All Projects!"
+    },
+    "ProjectDetail": {
+      "live": "Live",
+      "source": "Source Code",
+      "link": "Go to My Projects!",
+      "projects": [
+        {
+          "id": 1,
+          "src": "assets/img/sass-one-page.png",
+          "subImg": null,
+          "alt": "SASS One Page",
+          "name": "SASS One Page",
+          "usageTech": [
+            {
+              "name": "html",
+              "icon": "fa-html5"
+            },
+            {
+              "name": "scss",
+              "icon": "fa-sass"
+            }
+          ],
+          "mainTech": "sass",
+          "description": "A Single Page SASS Project developed using SASS (Syntactically Awesome Style Sheets) technology to create dynamic and impressive user experiences required by modern web design. SASS's powerful capabilities enable the creation of modular and scalable CSS code, while its single-page structure provides fast and seamless navigation. The user-friendly interface design, animations, transition effects, and innovative user interactions offer customization and flexibility for your project. A Single Page SASS Project offers an impressive and high-performing solution that follows modern web trends.",
+          "githubUrl": "https://github.com/Nursimaasilturk/SCSS-OnePage",
+          "netlifyUrl": "https://sima-scss-one-page.netlify.app/"
+        },
+        {
+          "id": 2,
+          "src": "assets/img/found-capital.png",
+          "subImg": null,
+          "alt": "FoundCapital",
+          "name": "Found Capital",
+          "usageTech": [
+            {
+              "name": "html",
+              "icon": "fa-html5"
+            },
+            {
+              "name": "css",
+              "icon": "fa-css3"
+            },
+            {
+              "name": "js",
+              "icon": "fa-js"
+            },
+            {
+              "name": "bootstrap",
+              "icon": "fa-bootstrap"
+            }
+          ],
+          "mainTech": "js",
+          "description": "Discover Capitals is an exciting way to explore global geography. This game tests your attention and speed as you race against time to discover and match the capitals of different countries on the world map. Prepare yourself for a challenging and fun experience while enhancing your cultural knowledge. Discover Capitals awaits you with its visual richness, user-friendly interface, and various difficulty levels. Use quick thinking and finding the correct answers to explore the capitals of countries. Test your geography knowledge, break your own records, and compete with your friends. In this game, you will discover new countries, experience cultural diversity, and dive into the exciting world of capitals around the globe. Are you ready? Start finding your capitals quickly and embark on an unforgettable journey!",
+          "githubUrl": "https://github.com/Nursimaasilturk/foundTheCapital-js",
+          "netlifyUrl": "https://found-the-capital-js.netlify.app/"
+        },
+        {
+          "id": 3,
+          "src": "assets/img/moonLight.png",
+          "subImg": null,
+          "alt": "moonLight",
+          "name": "Moonlight",
+          "usageTech": [
+            {
+              "name": "html",
+              "icon": "fa-html5"
+            },
+            {
+              "name": "css",
+              "icon": "fa-sass"
+            },
+            {
+              "name": "js",
+              "icon": "fa-js"
+            }
+          ],
+          "mainTech": "js",
+          "description": "Our single-page project designed with a parallax effect offers a captivating experience. As you scroll the page, it creates a sense of depth between layers and takes you on an impressive journey while exploring the content. Experience this project that stands out with modern design and smooth transitions.",
+          "githubUrl": "https://ayisigi.netlify.app/",
+          "netlifyUrl": "https://ayisigi.netlify.app/"
+        },
+        {
+          "id": 4,
+          "src": "assets/img/awatch.png",
+          "subImg": null,
+          "alt": "awatch",
+          "name": "Awatch",
+          "usageTech": [
+            {
+              "name": "html",
+              "icon": "fa-html5"
+            },
+            {
+              "name": "css",
+              "icon": "fa-css3"
+            },
+            {
+              "name": "js",
+              "icon": "fa-js"
+            }
+          ],
+          "mainTech": "css",
+          "description": "A CSS-based clock application with a sleek and minimalist design. It provides a real clock feel with animated hour and minute hands. Keep track of time in a stylish and user-friendly interface.",
+          "githubUrl": "https://github.com/Nursimaasilturk/AWatch",
+          "netlifyUrl": "https://awatch.netlify.app/"
+        }
+      ]
+    },
+    "ProjectAll": {
+      "all": "All"
     }
   }
 }
