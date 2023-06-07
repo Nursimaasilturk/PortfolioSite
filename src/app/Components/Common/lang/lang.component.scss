@@ -1,0 +1,43 @@
+@import "../../../../assets/variables.scss";
+
+.lang-dropdown {
+  background-color: red;
+  border-radius: 0.4rem;
+  width: 70px;
+  height: 40px;
+  &--values {
+    width: 65%;
+    height: 100%;
+    list-style: none;
+    &-lang {
+      background-color: black;
+      width: 70%;
+      height: 70%;
+      border-radius: 0.4rem;
+    }
+  }
+  &--btn {
+    width: 35%;
+    height: 100%;
+    button {
+      margin: 0;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      font-size: 1rem;
+      line-height: 0;
+      &.up {
+        width: 100%;
+        height: 40%;
+      }
+      &.down {
+        width: 100%;
+        height: 40%;
+      }
+    }
+    i {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

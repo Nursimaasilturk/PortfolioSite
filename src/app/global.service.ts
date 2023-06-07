@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class GlobalService {
   // başlangıçtaki dil seçeneği 'en' olduğu için değeri en olarak verdik.
-  private selectedLang = new BehaviorSubject<string>('en');
+  private selectedLang = new BehaviorSubject<string>('EN');
   selectedLang$ = this.selectedLang.asObservable();
 
   constructor() {}

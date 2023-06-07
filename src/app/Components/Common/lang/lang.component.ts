@@ -7,7 +7,7 @@ import { GlobalService } from 'src/app/global.service';
   styleUrls: ['./lang.component.scss'],
 })
 export class LangComponent implements OnInit {
-  selectedLangOption: string = '';
+  selectedLangOption: string = 'EN';
   constructor(private globalService: GlobalService) {}
 
   ngOnInit(): void {
@@ -15,7 +15,26 @@ export class LangComponent implements OnInit {
       this.selectedLangOption = value;
     });
   }
-  updateSelectedLang() {
-    this.globalService.setSelectedLang(this.selectedLangOption);
+
+  onUpButtonClicked(): void {
+    const newLang = this.getNextLang(this.selectedLangOption);
+    this.globalService.setSelectedLang(newLang);
+  }
+
+  onDownButtonClicked(): void {
+    const newLang = this.getPreviousLang(this.selectedLangOption);
+    this.globalService.setSelectedLang(newLang);
+  }
+  getNextLang(currentLang: string): string {
+    const langs = ['EN', 'TR'];
+    const currentIndex = langs.indexOf(currentLang);
+    const nextIndex = (currentIndex + 1) % langs.length;
+    return langs[nextIndex];
+  }
+  getPreviousLang(currentLang: string): string {
+    const langs = ['EN', 'TR'];
+    const currentIndex = langs.indexOf(currentLang);
+    const prevIndex = (currentIndex - 1 + langs.length) % langs.length;
+    return langs[prevIndex];
   }
 }

@@ -1,5 +1,5 @@
 {
-  "tr": {
+  "TR": {
     "Navbar": {
       "cvButton": "CV İndir"
     },
@@ -195,7 +195,7 @@
       "all": "Hepsi"
     }
   },
-  "en": {
+  "EN": {
     "Navbar": {
       "cvButton": "Download CV"
     },
