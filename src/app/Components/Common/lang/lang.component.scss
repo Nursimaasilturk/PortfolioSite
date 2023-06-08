@@ -1,7 +1,15 @@
 @import "../../../../assets/variables.scss";
 
 .lang-dropdown {
-  background-color: red;
+  /* From https://css.glass */
+  /* From https://css.glass */
+  background: rgba(23, 25, 58, 0.43);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.1px);
+  -webkit-backdrop-filter: blur(9.1px);
+  border: 1px solid rgba(23, 25, 58, 0.3);
+  border-radius: 0.3rem;
   border-radius: 0.4rem;
   width: 70px;
   height: 40px;
@@ -10,10 +18,19 @@
     height: 100%;
     list-style: none;
     &-lang {
-      background-color: black;
+      box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+        rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+      background-color: #ededed;
       width: 70%;
       height: 70%;
       border-radius: 0.4rem;
+      overflow: hidden;
+      span {
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        color: $dark-mode-pink--color;
+      }
     }
   }
   &--btn {
@@ -26,6 +43,10 @@
       background-color: transparent;
       font-size: 1rem;
       line-height: 0;
+      &:focus,
+      &:focus-visible {
+        outline: 0 !important;
+      }
       &.up {
         width: 100%;
         height: 40%;
@@ -38,6 +59,15 @@
     i {
       margin: 0;
       padding: 0;
+      color: $dark-mode-blue--color;
     }
   }
+}
+.slide-up {
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(-100%);
+}
+.slide-down {
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(100%);
 }
