@@ -13,6 +13,7 @@ export class NavbarComponent implements OnInit {
   changedLang: string = '';
   langTextPage: any;
   langTextFunc: any;
+  pdfPath: any;
   constructor(
     private gService: GlobalService,
     private http: HttpClient,
@@ -22,9 +23,11 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.gService.selectedLang$.subscribe((value) => {
       this.changedLang = value;
+      this.pdfPath = this.getPdfUrl();
     });
     this.http.get<any>('assets/data.json').subscribe((data) => {
       this.data = data;
+      this.pdfPath = this.getPdfUrl();
     });
     this.langTextPage = this.pService.getLangItemByPage('navbar');
   }
@@ -38,5 +41,9 @@ export class NavbarComponent implements OnInit {
           this.data
         )
       : 'loading';
+  }
+  getPdfUrl() {
+    let path = this.getLocalText('url');
+    return path;
   }
 }

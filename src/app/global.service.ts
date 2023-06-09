@@ -8,7 +8,7 @@ export class GlobalService {
   // başlangıçtaki dil seçeneği 'en' olduğu için değeri en olarak verdik.
   private selectedLang = new BehaviorSubject<string>('EN');
   selectedLang$ = this.selectedLang.asObservable();
-
+  
   constructor() {}
   // güncel dil değerini yakalama
   setSelectedLang(value: string) {

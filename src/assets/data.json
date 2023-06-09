@@ -1,7 +1,8 @@
 {
   "TR": {
     "Navbar": {
-      "cvButton": "CV İndir"
+      "cvButton": "CV İndir",
+      "url": "assets/cv/CV-tr.pdf"
     },
     "Contact": {
       "header": "İletişime Geçelim",
@@ -197,7 +198,8 @@
   },
   "EN": {
     "Navbar": {
-      "cvButton": "Download CV"
+      "cvButton": "Download CV",
+      "url": "assets/cv/CV-en.pdf"
     },
     "Contact": {
       "header": "Let's Get in Touch",

@@ -12,6 +12,7 @@ export class ProjectService {
   protected langTextAllPages: { [key: string]: object } = {
     navbar: {
       download: 'Navbar.cvButton',
+      url: 'Navbar.url',
     },
     contact: {
       header: 'Contact.header',

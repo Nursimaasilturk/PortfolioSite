@@ -1,9 +1,14 @@
 <div class="navbar__logo">
   <a routerLink="/" class="navbar__logo--text m-0">Sima</a>
 </div>
-<app-lang class="d-flex flex-row"></app-lang>
-<div class="nabvar__actions">
-  <button class="navbar__actions--download-cv">
+
+<div class="nabvar__actions d-flex flex-row">
+  <app-lang class="d-flex flex-row mx-3"></app-lang>
+  <a
+    [href]="pdfPath"
+    download
+    class="navbar__actions--download-cv d-flex flex-row align-items-center justify-content-center"
+  >
     <i class="fa-solid fa-arrow-down"></i>{{ getLocalText("download") }}
-  </button>
+  </a>
 </div>
