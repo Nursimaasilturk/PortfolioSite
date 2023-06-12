@@ -1,52 +1,60 @@
 <div *ngIf="!projectDetails">Loading...</div>
-<div *ngIf="projectDetails" class="projects-detail__image">
-  <img [src]="projectDetails.src" [alt]="projectDetails.alt" />
-</div>
-<div *ngIf="projectDetails" class="projects-detail__content d-flex flex-column">
-  <p class="projects-detail__content--title">Front-end Developer</p>
-  <h1 class="projects-detail__content--name">{{ projectDetails.name }}</h1>
-
-  <p class="projects-detail__content--desc">
-    {{ projectDetails.description }}
-  </p>
-  <ul
-    class="projects-detail__content--tech d-flex align-items-center p-0 my-4 flex-row"
-  >
-    <li
-      *ngFor="let tech of projectDetails.usageTech"
-      class="d-flex mx-3 align-items-center justify-content-center"
-    >
-      <i class="fa-brands" [ngClass]="tech.icon"></i>
-    </li>
-  </ul>
-  <div class="projects-detail__content--buttons m-3">
-    <button class="mx-3" (click)="goToLiveUrl(projectDetails.netlifyUrl)">
-      {{ getLocalText("liveBtn") }}
-    </button>
-    <button
-      class="mx-3 source-code"
-      (click)="goToSourceUrl(projectDetails.githubUrl)"
-    >
-      {{ getLocalText("sourceBtn") }}
-    </button>
+<div
+  *ngIf="projectDetails"
+  class="d-flex flex-row align-items-start justify-content-between w-100 h-100"
+>
+  <div class="projects-detail__image">
+    <img [src]="projectDetails.src" [alt]="projectDetails.alt" />
   </div>
-  <div class="projects-detail__content--back-to-project m-3">
-    <a
-      (click)="redirectToAllProjects()"
-      class="projects-detail__content--back-to-project-link"
+  <div class="projects-detail__content d-flex flex-column">
+    <app-logo
+      class="w-100 d-flex align-items-center justify-content-end"
+    ></app-logo>
+    <p class="projects-detail__content--title">Front-end Developer</p>
+    <h1 class="projects-detail__content--name">{{ projectDetails.name }}</h1>
+
+    <p class="projects-detail__content--desc">
+      {{ projectDetails.description }}
+    </p>
+    <ul
+      class="projects-detail__content--tech d-flex align-items-center p-0 my-4 flex-row"
     >
-      <svg
-        width="24"
-        height="24"
-        xmlns="http://www.w3.org/2000/svg"
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+      <li
+        *ngFor="let tech of projectDetails.usageTech"
+        class="d-flex mx-3 align-items-center justify-content-center"
       >
-        <path
-          d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z"
-        />
-      </svg>
-      {{ getLocalText("link") }}
-    </a>
+        <i class="fa-brands" [ngClass]="tech.icon"></i>
+      </li>
+    </ul>
+    <div class="projects-detail__content--buttons m-3">
+      <button class="mx-3" (click)="goToLiveUrl(projectDetails.netlifyUrl)">
+        {{ getLocalText("liveBtn") }}
+      </button>
+      <button
+        class="mx-3 source-code"
+        (click)="goToSourceUrl(projectDetails.githubUrl)"
+      >
+        {{ getLocalText("sourceBtn") }}
+      </button>
+    </div>
+    <div class="projects-detail__content--back-to-project m-3">
+      <a
+        (click)="redirectToAllProjects()"
+        class="projects-detail__content--back-to-project-link"
+      >
+        <svg
+          width="24"
+          height="24"
+          xmlns="http://www.w3.org/2000/svg"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+        >
+          <path
+            d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z"
+          />
+        </svg>
+        {{ getLocalText("link") }}
+      </a>
+    </div>
   </div>
 </div>

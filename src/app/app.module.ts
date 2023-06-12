@@ -20,6 +20,8 @@ import { ProjectAllComponent } from './Components/Pages/project-all/project-all.
 import { LangComponent } from './Components/Common/lang/lang.component';
 import { GlobalService } from './global.service';
 import { FormsModule } from '@angular/forms';
+import { LogoComponent } from './Components/Common/logo/logo.component';
+import { PdfComponent } from './Components/Common/pdf/pdf.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { FormsModule } from '@angular/forms';
     ProjectDetailComponent,
     ProjectAllComponent,
     LangComponent,
+    LogoComponent,
+    PdfComponent,
   ],
   imports: [
     BrowserModule,
