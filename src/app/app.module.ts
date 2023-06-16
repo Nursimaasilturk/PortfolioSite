@@ -22,6 +22,7 @@ import { GlobalService } from './global.service';
 import { FormsModule } from '@angular/forms';
 import { LogoComponent } from './Components/Common/logo/logo.component';
 import { PdfComponent } from './Components/Common/pdf/pdf.component';
+import { DarkLightModeComponent } from './Components/Common/dark-light-mode/dark-light-mode.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { PdfComponent } from './Components/Common/pdf/pdf.component';
     LangComponent,
     LogoComponent,
     PdfComponent,
+    DarkLightModeComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
-
+import { BehaviorSubject, Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
@@ -8,7 +7,13 @@ export class GlobalService {
   // başlangıçtaki dil seçeneği 'en' olduğu için değeri en olarak verdik.
   private selectedLang = new BehaviorSubject<string>('EN');
   selectedLang$ = this.selectedLang.asObservable();
-  
+  // Dark-Light Mode colour defining
+  private currentBlue = new BehaviorSubject<string>('#78f1ff');
+  selectedBlue = this.currentBlue.asObservable();
+  private currentPink = new BehaviorSubject<string>('ff3779');
+  selectedPink = this.currentPink.asObservable();
+  private isChecked = new BehaviorSubject<boolean>(true);
+  selectedCheck = this.isChecked.asObservable();
   constructor() {}
   // güncel dil değerini yakalama
   setSelectedLang(value: string) {
@@ -33,5 +38,15 @@ export class GlobalService {
       }
     }
     return object;
+  }
+  // mode functions
+  setBlue(color: string) {
+    this.currentBlue.next(color);
+  }
+  setPink(color: string) {
+    this.currentPink.next(color);
+  }
+  setChecked(mode: boolean) {
+    this.isChecked.next(mode);
   }
 }
