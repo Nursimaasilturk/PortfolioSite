@@ -12,3 +12,13 @@ $main-font-family: "Abel", sans-serif;
 .color-pink {
   color: $dark-mode-pink--color;
 }
+.dark-mode {
+  $pinkColor: $dark-mode-pink--color;
+  $blueColor: $dark-mode-blue--color;
+  $bgColor: $dark-mode-bg--color;
+}
+.light-mode {
+  $pinkColor: $light-mode-pink--color;
+  $blueColor: $light-mode-blue--color;
+  $bgColor: $light-mode-bg--color;
+}

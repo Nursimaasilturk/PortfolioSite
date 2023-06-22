@@ -1,12 +1,10 @@
-<h1 [style.color]="pinkColor">Renk değişiyor</h1>
-
 <div class="toggleWrapper">
   <input
     type="checkbox"
     class="dn"
     id="dn"
     [(ngModel)]="isChecked"
-    (ngModelChange)="isDark()"
+    (ngModelChange)="isToggleTheme()"
   />
   <label for="dn" class="toggle">
     <span class="toggle__handler">

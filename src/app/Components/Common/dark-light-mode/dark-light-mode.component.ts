@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs/internal/Observable';
 import { GlobalService } from 'src/app/global.service';
+import Colors from 'src/assets/colors';
 
 @Component({
   selector: 'app-dark-light-mode',
@@ -8,26 +8,19 @@ import { GlobalService } from 'src/app/global.service';
   styleUrls: ['./dark-light-mode.component.scss'],
 })
 export class DarkLightModeComponent implements OnInit {
-  isChecked: boolean = false;
-  pinkColor!: string;
+  isChecked: boolean = true;
+  modeTheme: Object = {};
   constructor(private globalService: GlobalService) {}
-
-  ngOnInit(): void {
-    this.globalService.selectedPink.subscribe((value) => {
-      this.pinkColor = value;
-    });
-    this.globalService.selectedCheck.subscribe((value) => {
-      this.isDark();
-    });
+  ngOnInit(): void {}
+  // checked durumuna göre Color içindeki değerleri modeTheme aktardık
+  setThemeByChecked() {
+    return this.isChecked
+      ? (this.modeTheme = { ...Colors.dark })
+      : (this.modeTheme = { ...Colors.light });
   }
-
-  isDark() {
-    if (this.isChecked) {
-      this.globalService.setBlue('#78f1ff');
-      this.globalService.setPink('#ff3779');
-    } else {
-      this.globalService.setBlue('#a5e1e9');
-      this.globalService.setPink('#ff96a7');
-    }
+  // modeTheme içerisindeki değeri global servicedeki Observer ile güncelledik.
+  isToggleTheme() {
+    this.setThemeByChecked();
+    this.globalService.setTheme(this.modeTheme);
   }
 }
