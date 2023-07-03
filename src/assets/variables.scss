@@ -6,19 +6,14 @@ $dark-mode-pink--color: #ff3779;
 $dark-mode-blue--color: #78f1ff;
 $header-font-family: "Bruno Ace", cursive;
 $main-font-family: "Abel", sans-serif;
+$bodyMode: "dark-mode";
+$pinkColor: bodyMode == "dark-mode" ? $dark-mode-pink--color : $light-mode-pink--color;
+body.$bodyMode{
+  color:$pinkColor;
+}
 .color-blue {
-  color: $dark-mode-blue--color;
+  color: $dark-mode-pink--color;
 }
 .color-pink {
   color: $dark-mode-pink--color;
-}
-.dark-mode {
-  $pinkColor: $dark-mode-pink--color;
-  $blueColor: $dark-mode-blue--color;
-  $bgColor: $dark-mode-bg--color;
-}
-.light-mode {
-  $pinkColor: $light-mode-pink--color;
-  $blueColor: $light-mode-blue--color;
-  $bgColor: $light-mode-bg--color;
 }

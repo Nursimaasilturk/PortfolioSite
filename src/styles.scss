@@ -11,6 +11,12 @@ body {
   color: white;
   overflow: auto;
 }
+body.dark-mode {
+  $pinkColor: $dark-mode-pink--color;
+}
+body.light-mode {
+  $pinkColor: $light-mode-pink--color;
+}
 //Costom CSS General
 i.fa-html5 {
   color: #e44d26;

@@ -15,13 +15,6 @@ export class LangComponent implements OnInit {
     this.globalService.selectedLang$.subscribe((value) => {
       this.selectedLangOption = value;
     });
-    this.globalService.selectedTheme.subscribe((value) => {
-      this.selectedTheme = value;
-    });
-
-    this.globalService.getTheme().subscribe((val) => {
-      this.selectedTheme = val;
-    });
   }
 
   onUpButtonClicked(): void {

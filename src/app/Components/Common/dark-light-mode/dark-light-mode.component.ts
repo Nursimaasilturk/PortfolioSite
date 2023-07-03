@@ -14,13 +14,11 @@ export class DarkLightModeComponent implements OnInit {
   ngOnInit(): void {}
   // checked durumuna göre Color içindeki değerleri modeTheme aktardık
   setThemeByChecked() {
-    return this.isChecked
-      ? (this.modeTheme = { ...Colors.dark })
-      : (this.modeTheme = { ...Colors.light });
+    return this.isChecked ? 'dark-mode' : 'light-mode';
   }
   // modeTheme içerisindeki değeri global servicedeki Observer ile güncelledik.
   isToggleTheme() {
     this.setThemeByChecked();
-    this.globalService.setTheme(this.modeTheme);
+    this.globalService.setSelectedTheme(this.setThemeByChecked());
   }
 }

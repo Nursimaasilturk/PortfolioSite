@@ -10,11 +10,8 @@ export class GlobalService {
   private selectedLang = new BehaviorSubject<string>('EN');
   selectedLang$ = this.selectedLang.asObservable();
 
-  private themeColors = new BehaviorSubject<object>({
-    pinkColor: '#ff3779',
-    blueColor: '#78f1ff',
-  });
-  selectedTheme = this.themeColors.asObservable();
+  private themeName = new BehaviorSubject<string>('dark-mode');
+  selectedTheme$ = this.themeName.asObservable();
 
   // Dark-Light Mode colour defining
   constructor() {}
@@ -42,11 +39,7 @@ export class GlobalService {
     }
     return object;
   }
-  // mode functions
-  setTheme(value: Object) {
-    this.themeColors.next(value);
-  }
-  getTheme() {
-    return this.selectedTheme;
+  setSelectedTheme(value: string) {
+    this.themeName.next(value);
   }
 }
