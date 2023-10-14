@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalService } from 'src/app/global.service';
-import Colors from 'src/assets/colors';
 
 @Component({
   selector: 'app-dark-light-mode',

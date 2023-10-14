@@ -5,6 +5,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
+  mobileOpen: boolean = false;
   constructor() {}
   ngOnInit(): void {}
+  openMenu() {
+    this.mobileOpen = true;
+    console.log(true);
+  }
+  closeMenu() {
+    this.mobileOpen = false;
+    console.log(true);
+  }
 }

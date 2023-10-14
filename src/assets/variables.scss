@@ -6,14 +6,30 @@ $dark-mode-pink--color: #ff3779;
 $dark-mode-blue--color: #78f1ff;
 $header-font-family: "Bruno Ace", cursive;
 $main-font-family: "Abel", sans-serif;
-$bodyMode: "dark-mode";
-$pinkColor: bodyMode == "dark-mode" ? $dark-mode-pink--color : $light-mode-pink--color;
-body.$bodyMode{
-  color:$pinkColor;
+////////// light-mode theme ///////
+.light-mode--pink-color {
+  color: $light-mode-pink--color;
 }
-.color-blue {
+.light-mode--bg-pink-color {
+  background-color: $light-mode-pink--color;
+}
+
+.light-mode--blue-color {
+  color: $light-mode-blue--color;
+}
+.light-mode--bg-blue-color {
+  background-color: $light-mode-blue--color;
+}
+////////// dark-mode theme ///////
+.dark-mode--pink-color {
   color: $dark-mode-pink--color;
 }
-.color-pink {
-  color: $dark-mode-pink--color;
+.dark-mode--bg-pink-color {
+  background-color: $dark-mode-pink--color;
+}
+.dark-mode--blue-color {
+  color: $dark-mode-blue--color;
+}
+.dark-mode--bg-blue-color {
+  background-color: $dark-mode-blue--color;
 }

@@ -17,6 +17,7 @@ export class ProjectDetailComponent implements OnInit {
   langTextPage: any;
   projectDetails: any;
   resultArr!: Project[];
+  modeTheme?: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -42,8 +43,9 @@ export class ProjectDetailComponent implements OnInit {
       );
     });
     this.langTextPage = this.projectService.getLangItemByPage('projectDetail');
-
-    // servisden idye göre objeyi çağırma
+    this.gService.selectedTheme$.subscribe((value) => {
+      this.modeTheme = value;
+    });
   }
   goToLiveUrl(url: string) {
     window.open(url, '_blank');

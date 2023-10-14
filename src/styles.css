@@ -1,39 +1,73 @@
-@import "./assets/variables.scss";
 @import "primeng/resources/primeng.min.css";
 @import "primeng/resources/themes/saga-blue/theme.css";
+.light-mode--pink-color {
+  color: #ff96a7;
+}
+
+.light-mode--bg-pink-color {
+  background-color: #ff96a7;
+}
+
+.light-mode--blue-color {
+  color: #a5e1e9;
+}
+
+.light-mode--bg-blue-color {
+  background-color: #a5e1e9;
+}
+
+.dark-mode--pink-color {
+  color: #ff3779;
+}
+
+.dark-mode--bg-pink-color {
+  background-color: #ff3779;
+}
+
+.dark-mode--blue-color {
+  color: #78f1ff;
+}
+
+.dark-mode--bg-blue-color {
+  background-color: #78f1ff;
+}
+
 body {
   width: 100vw;
   height: 100vh;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: $main-font-family;
+  font-family: "Abel", sans-serif;
   color: white;
   overflow: auto;
 }
 
-//Costom CSS General
 i.fa-html5 {
   color: #e44d26;
 }
+
 i.fa-css3 {
   color: #2965f1;
 }
+
 i.fa-sass {
   color: #c69;
 }
+
 i.fa-angular {
   color: #dd0031;
 }
+
 i.fa-js {
   color: #f0db4f;
 }
+
 i.fa-bootstrap {
   color: #6f42c1;
 }
-//
+
 app-root {
-  // background-image: url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
   background-image: url("https://images.unsplash.com/photo-1510906594845-bc082582c8cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1144&q=80");
   background-repeat: no-repeat;
   background-size: cover;
@@ -44,7 +78,6 @@ app-root {
   height: 100%;
 }
 
-// Layout
 app-main-dashboard {
   width: 100%;
   height: 100%;
@@ -52,30 +85,29 @@ app-main-dashboard {
   top: 0;
   left: 0;
 }
+
 app-navbar {
   height: 70px;
   padding: 1.5rem;
 }
-app-sidebar {
-}
+
 .main-content {
   width: calc(100% - 100px);
   overflow: auto;
-  &::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-    background-color: transparent;
-  }
 }
+.main-content::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+}
+
 app-logo {
-  font-family: $header-font-family;
+  font-family: "Bruno Ace", cursive;
   font-size: 2rem;
-  color: $dark-mode-pink--color;
+  color: #ff3779;
   text-shadow: 0px 11px 10px rgba(123, 7, 92, 0.8);
 }
-app-dark-light-mode {
-}
-// Pages
+
 app-contact,
 app-about {
   width: 100%;
@@ -84,13 +116,17 @@ app-about {
   align-items: center;
   justify-content: center;
 }
+
 app-about {
   align-items: flex-start !important;
   height: auto !important;
-  @media screen and (max-width: 576px) {
+}
+@media screen and (max-width: 576px) {
+  app-about {
     width: 100% !important;
   }
 }
+
 app-project {
   width: 100%;
   height: 100%;
@@ -99,6 +135,7 @@ app-project {
   padding: 2rem;
   justify-content: space-between;
 }
+
 app-project-detail,
 app-project-all {
   top: 0;
@@ -110,21 +147,24 @@ app-project-all {
   display: flex;
   align-items: flex-start;
 }
+
 app-project-detail {
   z-index: 99;
   padding: 2rem;
   flex-direction: row;
   justify-content: space-between;
 }
+
 app-project-all {
   z-index: 9;
   flex-direction: column;
   justify-content: flex-start;
 }
+
 @media screen and (max-width: 767px) {
   app-logo {
     font-size: 1.4rem;
-    color: $dark-mode-pink--color;
+    color: #ff3779;
     text-shadow: 0px 7px 6px rgba(123, 7, 92, 0.8);
   }
   #mobile-navbar__icon {
@@ -133,4 +173,4 @@ app-project-all {
   app-navbar {
     padding: 0.5rem;
   }
-}
+}/*# sourceMappingURL=styles.css.map */

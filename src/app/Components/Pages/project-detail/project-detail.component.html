@@ -11,7 +11,12 @@
       class="w-100 d-flex align-items-center justify-content-end"
     ></app-logo>
     <p class="projects-detail__content--title">Front-end Developer</p>
-    <h1 class="projects-detail__content--name">{{ projectDetails.name }}</h1>
+    <h1
+      class="projects-detail__content--name"
+      ngClass="{{ modeTheme }}--pink-color"
+    >
+      {{ projectDetails.name }}
+    </h1>
 
     <p class="projects-detail__content--desc">
       {{ projectDetails.description }}

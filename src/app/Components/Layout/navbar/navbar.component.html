@@ -1,8 +1,35 @@
 <app-logo></app-logo>
-<div class="nabvar__actions d-flex flex-row">
+<div class="nabvar__actions d-none d-lg-flex flex-row">
   <app-dark-light-mode
     class="d-flex align-items-center justify-content-center"
   ></app-dark-light-mode>
   <app-lang class="d-flex flex-row mx-3"></app-lang>
   <app-pdf></app-pdf>
+</div>
+<div class="mobile-navbar d-flex d-lg-none">
+  <i class="fa-solid fa-bars" id="mobile-navbar__icon" (click)="openMenu()"></i>
+  <div
+    class="mobile-navbar__menu d-flex flex-column justify-content-between"
+    [ngClass]="{ active: mobileOpen }"
+  >
+    <i class="fa-solid fa-x" (click)="closeMenu()" id="close-btn"></i>
+    <ul class="navbar-links">
+      <li class="navbar-links--item about">
+        <a routerLink="/about"> About </a>
+      </li>
+      <li class="navbar-links--item projects">
+        <a routerLink="/projects"> Projects </a>
+      </li>
+      <li class="navbar-links--item contact">
+        <a routerLink="/contact"> Contact </a>
+      </li>
+    </ul>
+    <div class="d-flex flex-column">
+      <div class="d-flex align-items-center justify-content-around m-2">
+        <app-dark-light-mode class="d-flex"></app-dark-light-mode>
+        <app-lang class="d-flex"></app-lang>
+      </div>
+      <app-pdf class="mt-2"></app-pdf>
+    </div>
+  </div>
 </div>

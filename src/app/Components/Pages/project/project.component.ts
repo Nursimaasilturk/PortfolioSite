@@ -14,6 +14,9 @@ export class ProjectComponent implements OnInit {
   data: any;
   changedLang: string = ' ';
   langTextPage: any;
+  modeTheme?: string;
+  isHovered: boolean = false;
+  hoveredColor?: string;
 
   constructor(
     private router: Router,
@@ -32,6 +35,9 @@ export class ProjectComponent implements OnInit {
       this.projects = this.getLocalText('projectD');
     });
     this.langTextPage = this.service.getLangItemByPage('projects');
+    this.gService.selectedTheme$.subscribe((value) => {
+      this.modeTheme = value;
+    });
   }
 
   redirectToProjectDetail(id: any) {

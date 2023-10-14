@@ -1,0 +1,36 @@
+.light-mode--pink-color {
+  color: #ff96a7;
+}
+
+.light-mode--bg-pink-color {
+  background-color: #ff96a7;
+}
+
+.light-mode--blue-color {
+  color: #a5e1e9;
+}
+
+.light-mode--bg-blue-color {
+  background-color: #a5e1e9;
+}
+
+.dark-mode--pink-color {
+  color: #ff3779;
+}
+
+.dark-mode--bg-pink-color {
+  background-color: #ff3779;
+}
+
+.dark-mode--blue-color {
+  color: #78f1ff;
+}
+
+.dark-mode--bg-blue-color {
+  background-color: #78f1ff;
+}
+
+.logo--text {
+  text-decoration: none;
+  color: #ff3779;
+}/*# sourceMappingURL=logo.component.css.map */

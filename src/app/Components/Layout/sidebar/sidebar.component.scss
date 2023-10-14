@@ -2,8 +2,14 @@
 
 .page-links {
   height: 30%;
+  @media screen and (max-width: 576px) {
+    height: 75% !important;
+    padding: 0;
+    width: 100%;
+  }
   list-style: none;
   &--item i {
+    margin: 1rem;
     font-size: 1.3rem;
     color: white;
     opacity: 0.8;

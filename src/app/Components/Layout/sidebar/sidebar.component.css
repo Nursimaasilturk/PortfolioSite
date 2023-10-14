@@ -1,0 +1,50 @@
+.light-mode--pink-color {
+  color: #ff96a7;
+}
+
+.light-mode--bg-pink-color {
+  background-color: #ff96a7;
+}
+
+.light-mode--blue-color {
+  color: #a5e1e9;
+}
+
+.light-mode--bg-blue-color {
+  background-color: #a5e1e9;
+}
+
+.dark-mode--pink-color {
+  color: #ff3779;
+}
+
+.dark-mode--bg-pink-color {
+  background-color: #ff3779;
+}
+
+.dark-mode--blue-color {
+  color: #78f1ff;
+}
+
+.dark-mode--bg-blue-color {
+  background-color: #78f1ff;
+}
+
+.page-links {
+  height: 30%;
+  list-style: none;
+}
+@media screen and (max-width: 576px) {
+  .page-links {
+    height: 75% !important;
+    padding: 0;
+    width: 100%;
+  }
+}
+.page-links--item i {
+  margin: 1rem;
+  font-size: 1.3rem;
+  color: white;
+  opacity: 0.8;
+  text-shadow: 3px 0px 7px rgba(204, 210, 221, 0.8), -3px 0px 7px rgba(197, 204, 208, 0.8), 0px 4px 7px rgba(81, 67, 21, 0.8);
+}/*# sourceMappingURL=sidebar.component.css.map */

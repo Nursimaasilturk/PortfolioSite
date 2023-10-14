@@ -12,6 +12,7 @@ export class ContactComponent implements OnInit {
   data: any;
   changedLang: string = '';
   langTextPage: any;
+  modeTheme?: string;
   constructor(
     private gService: GlobalService,
     private http: HttpClient,
@@ -25,6 +26,9 @@ export class ContactComponent implements OnInit {
       this.data = data;
     });
     this.langTextPage = this.pService.getLangItemByPage('contact');
+    this.gService.selectedTheme$.subscribe((value) => {
+      this.modeTheme = value;
+    });
   }
 
   getLocalText(key: any) {

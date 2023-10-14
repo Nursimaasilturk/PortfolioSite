@@ -1,9 +1,18 @@
 <div class="projects__information pl-4">
-  <h1 class="projects__information--header">{{ getLocalText("header") }}</h1>
+  <h1
+    class="projects__information--header"
+    ngClass="{{ modeTheme }}--blue-color"
+  >
+    {{ getLocalText("header") }}
+  </h1>
   <p class="projects__information--text">
     {{ getLocalText("desc") }}
   </p>
-  <a class="projects__information--button" [routerLink]="['./all']">
+  <a
+    ngClass="{{ modeTheme }}--blue-color"
+    class="projects__information--button"
+    [routerLink]="['./all']"
+  >
     {{ getLocalText("button") }}
   </a>
 </div>

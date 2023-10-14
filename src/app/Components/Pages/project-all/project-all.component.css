@@ -1,0 +1,109 @@
+.light-mode--pink-color {
+  color: #ff96a7;
+}
+
+.light-mode--bg-pink-color {
+  background-color: #ff96a7;
+}
+
+.light-mode--blue-color {
+  color: #a5e1e9;
+}
+
+.light-mode--bg-blue-color {
+  background-color: #a5e1e9;
+}
+
+.dark-mode--pink-color {
+  color: #ff3779;
+}
+
+.dark-mode--bg-pink-color {
+  background-color: #ff3779;
+}
+
+.dark-mode--blue-color {
+  color: #78f1ff;
+}
+
+.dark-mode--bg-blue-color {
+  background-color: #78f1ff;
+}
+
+.all {
+  margin: auto;
+  width: 90%;
+  height: 88%;
+  /* From https://css.glass */
+}
+.all__filters {
+  height: 10%;
+}
+.all__filters ul {
+  height: 80%;
+  width: 80%;
+  list-style: none;
+}
+.all__filters--item {
+  padding: 0.4rem 0.9rem;
+  min-width: 90px;
+  background-color: #ff3779;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.all__filters--item a {
+  text-decoration: none;
+  color: white;
+}
+.all__projects {
+  width: 95%;
+  height: 85%;
+  overflow-x: hidden;
+}
+.all__projects::-webkit-scrollbar {
+  display: none;
+}
+.all__projects--card {
+  position: relative;
+  width: 280px;
+  height: 350px;
+  border-radius: 0.4rem;
+  background-color: aqua;
+  overflow: hidden;
+  cursor: pointer;
+}
+.all__projects--card-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.all__projects--card-title {
+  position: absolute;
+  bottom: 5%;
+  left: 30%;
+  color: white;
+}
+
+.html-css {
+  background: hsl(18, 87%, 55%);
+  background: linear-gradient(315deg, hsl(18, 87%, 55%) 36%, hsl(228, 78%, 52%) 56%);
+  background: -webkit-linear-gradient(315deg, hsl(18, 87%, 55%) 36%, hsl(228, 78%, 52%) 56%);
+}
+
+.sass {
+  background-color: #cc6699;
+}
+
+.js {
+  background-color: #f0db4f;
+}
+
+.ts {
+  background-color: #007acc;
+}
+
+.angular {
+  background-color: #b52e31;
+}/*# sourceMappingURL=project-all.component.css.map */

@@ -9,7 +9,9 @@
     <div
       class="contact__touch-content--explanation px-5 d-flex align-items-start justify-content-start flex-column"
     >
-      <h1 class="my-2">{{ getLocalText("header") }}</h1>
+      <h1 ngClass="{{ modeTheme }}--blue-color" class="my-2">
+        {{ getLocalText("header") }}
+      </h1>
       <p class="touch-text my-2">
         {{ getLocalText("desc") }}
       </p>
@@ -19,6 +21,7 @@
       >
         <input type="text" [placeholder]="getLocalText('mail')" />
         <button
+          ngClass="{{ modeTheme }}--bg-pink-color"
           class="send-btn d-flex align-items-center justify-content-center"
         >
           <i class="fa-solid fa-paper-plane"></i>

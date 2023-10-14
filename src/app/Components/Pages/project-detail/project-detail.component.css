@@ -1,0 +1,115 @@
+.light-mode--pink-color {
+  color: #ff96a7;
+}
+
+.light-mode--bg-pink-color {
+  background-color: #ff96a7;
+}
+
+.light-mode--blue-color {
+  color: #a5e1e9;
+}
+
+.light-mode--bg-blue-color {
+  background-color: #a5e1e9;
+}
+
+.dark-mode--pink-color {
+  color: #ff3779;
+}
+
+.dark-mode--bg-pink-color {
+  background-color: #ff3779;
+}
+
+.dark-mode--blue-color {
+  color: #78f1ff;
+}
+
+.dark-mode--bg-blue-color {
+  background-color: #78f1ff;
+}
+
+.projects-detail__image {
+  width: 45%;
+  height: 100%;
+  background-color: rgba(22, 170, 220, 0.3);
+  border-radius: 0.7rem;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  overflow: hidden;
+}
+.projects-detail__image img {
+  width: 100%;
+  height: 100%;
+}
+.projects-detail__content {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+.projects-detail__content--title {
+  opacity: 0.4;
+}
+.projects-detail__content--name {
+  font-size: 3.5rem;
+  text-shadow: 3px -2px 8px rgba(128, 0, 0, 0.85);
+}
+.projects-detail__content--desc {
+  line-height: 30px;
+}
+.projects-detail__content--tech {
+  list-style: none;
+}
+.projects-detail__content--tech li {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+}
+.projects-detail__content--tech li i {
+  font-size: 1.5rem;
+}
+.projects-detail__content--buttons {
+  width: 100%;
+}
+.projects-detail__content--buttons button {
+  min-width: 100px;
+  padding: 0.7rem 0.9rem;
+  margin: 0.5rem;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  color: rgb(7, 7, 21);
+  border: 1px solid #ff3779;
+  background-color: transparent;
+  transition: 0.4s ease-in;
+  color: #ff3779;
+}
+.projects-detail__content--buttons button:hover {
+  color: white;
+  background-color: #ff3779;
+}
+.projects-detail__content--buttons .source-code {
+  border: 1px solid #78f1ff;
+  color: #78f1ff;
+  background-color: transparent;
+  transition: 0.4s ease-in;
+}
+.projects-detail__content--buttons .source-code:hover {
+  color: rgb(7, 7, 21);
+  background-color: #78f1ff;
+}
+.projects-detail__content--back-to-project {
+  position: absolute;
+  bottom: 1%;
+  left: 1%;
+  opacity: 0.4;
+}
+.projects-detail__content--back-to-project a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+.projects-detail__content--back-to-project svg {
+  fill: white;
+  margin-right: 1rem;
+}/*# sourceMappingURL=project-detail.component.css.map */

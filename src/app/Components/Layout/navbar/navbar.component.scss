@@ -1,0 +1,38 @@
+@import "../../../../assets/variables.scss";
+.mobile-navbar {
+  i {
+    font-size: 1.5rem;
+    color: $dark-mode-pink--color;
+    cursor: pointer;
+    &#close-btn {
+      position: absolute;
+      top: 3%;
+      right: 5%;
+      font-size: 1rem;
+    }
+  }
+  &__menu {
+    padding: 50px 30px;
+    width: 270px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: -270px;
+    z-index: 10;
+    height: 100vh;
+    transition: 0.3s ease-in;
+    .navbar-links {
+      padding: 0;
+      li {
+        padding: 0.3rem 0rem;
+        a {
+          font-weight: 600;
+          color: #000;
+        }
+      }
+    }
+    &.active {
+      right: 0;
+    }
+  }
+}

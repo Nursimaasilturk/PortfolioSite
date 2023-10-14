@@ -1,0 +1,13 @@
+.main-container {
+  height: calc(100% - 70px);
+}
+@media screen and (max-width: 576px) {
+  .main-container .main-content {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .main-container {
+    width: 100% !important;
+  }
+}/*# sourceMappingURL=main-dashboard.component.css.map */
