@@ -24,10 +24,7 @@
   @media screen and (max-width: 575px) {
     height: auto;
     max-height: none;
-    background: transparent;
-    box-shadow: none;
-    backdrop-filter: none;
-    border: none;
+    @include no-glassmorfism();
   }
   .contact {
     &__touch-content {
@@ -66,7 +63,7 @@
           opacity: 0.7;
         }
         @media screen and (max-width: 767px) {
-          margin-top: 1rem;
+          margin-top: 2rem;
           width: 100% !important;
           h1 {
             text-align: center;

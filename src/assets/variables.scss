@@ -33,3 +33,9 @@ $main-font-family: "Abel", sans-serif;
 .dark-mode--bg-blue-color {
   background-color: $dark-mode-blue--color;
 }
+@mixin no-glassmorfism {
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  border: none;
+}

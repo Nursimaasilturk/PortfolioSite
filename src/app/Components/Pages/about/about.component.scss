@@ -3,6 +3,13 @@
 .about-container {
   width: 90%;
   margin-top: 1rem;
+  max-width: 1200px;
+  @media screen and (max-width: 991px) {
+    width: 95%;
+  }
+  @media screen and (max-width: 767px) {
+    margin-top: 0;
+  }
 }
 .about {
   &__introduction {
@@ -16,7 +23,7 @@
     border-radius: 0.3rem;
     &--image {
       width: 45%;
-      height: 500px;
+      aspect-ratio: 1 / 1;
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       border-radius: 0.3rem;
       overflow: hidden;
@@ -64,6 +71,7 @@
       &-item {
         width: 48%;
         .skill-item {
+          width: 100%;
           p,
           h5 {
             margin: 0;
@@ -71,9 +79,14 @@
           &--name {
             opacity: 0.7;
           }
+          #progress-bar-container {
+            width: 80%;
+          }
           &--progress-bar {
+            width: 100%;
             position: relative;
-            width: 350px;
+            min-width: 240px;
+            max-width: 350px;
             height: 5px;
             background-color: rgb(38, 55, 55);
 
@@ -93,49 +106,63 @@
       }
     }
   }
-}
-@media screen and (max-width: 576px) {
-  .about-container {
-    width: 100%;
-    margin: 0;
-    padding: 0.5rem !important;
+  @media screen and (max-width: 1399px) {
+    &__introduction,
+    &__experiance,
+    &__skills {
+      width: 100%;
+    }
   }
-  .about {
+  @media screen and (max-width: 767px) {
     &__introduction {
-      width: 100% !important;
-      &--image,
       &--text {
-        width: 95%;
-      }
-      &--text {
-        margin-top: 1rem;
+        width: 100%;
         h1 {
           text-align: center;
         }
-        p {
-          text-align: justify;
-        }
+      }
+    }
+    &__skills-container-item {
+      width: 100%;
+      .skill-item--progress-bar {
+        max-width: 500px;
+      }
+    }
+  }
+  @media screen and (max-width: 575px) {
+    &__introduction {
+      @include no-glassmorfism();
+      &--image {
+        min-width: 300px;
+      }
+      &--text {
+        text-align: justify;
+        margin-top: 2rem;
       }
     }
     &__experiance {
-      margin-top: 0rem !important;
-      margin-bottom: 0rem !important;
-      width: 100%;
-    }
-    &__skills {
-      width: 100%;
-      margin-top: 0rem;
-      &-container-item {
-        width: 100%;
-        h3 {
-          margin: 0 0 1rem 0 !important;
-        }
-        .skill-item {
-          &--progress-bar {
-            width: 230px !important;
-          }
+      &-content {
+        @include no-glassmorfism();
+        &--text {
+          width: 100%;
         }
       }
+    }
+    &__skills {
+      @include no-glassmorfism();
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .about__skills-container-item .skill-item {
+    flex-direction: column !important;
+    margin-bottom: 2rem;
+    align-items: baseline !important;
+    #progress-bar-container {
+      width: 100%;
+    }
+    &#pro-lang {
+      flex-direction: row !important;
     }
   }
 }
