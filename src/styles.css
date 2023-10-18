@@ -116,6 +116,13 @@ app-about {
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width: 991px) {
+  app-contact,
+  app-about {
+    align-items: baseline;
+    margin-top: 2rem;
+  }
+}
 
 app-about {
   align-items: flex-start !important;

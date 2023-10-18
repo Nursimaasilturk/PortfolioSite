@@ -33,7 +33,8 @@
 .contact-container {
   width: 65%;
   height: 70vh;
-  /* From https://css.glass */
+  min-height: 500px;
+  max-height: 600px;
   background: rgba(23, 25, 58, 0.43);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -41,8 +42,40 @@
   -webkit-backdrop-filter: blur(9.1px);
   border: 1px solid rgba(23, 25, 58, 0.3);
 }
+@media screen and (max-width: 1200px) {
+  .contact-container {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .contact-container {
+    border-radius: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact-container {
+    height: auto;
+    max-height: none;
+  }
+}
+@media screen and (max-width: 575px) {
+  .contact-container {
+    height: auto;
+    max-height: none;
+    background: transparent;
+    box-shadow: none;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+    border: none;
+  }
+}
 .contact-container .contact__touch-content {
   height: 70%;
+}
+@media screen and (max-width: 991px) {
+  .contact-container .contact__touch-content {
+    margin-top: 1rem;
+  }
 }
 .contact-container .contact__touch-content--image {
   width: 40%;
@@ -50,6 +83,18 @@
   background-color: black;
   overflow: hidden;
   border-radius: 0.7rem;
+}
+@media screen and (max-width: 991px) {
+  .contact-container .contact__touch-content--image {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact-container .contact__touch-content--image {
+    margin: auto !important;
+    width: 50%;
+    min-width: 300px !important;
+  }
 }
 .contact-container .contact__touch-content--image img {
   width: 100%;
@@ -67,6 +112,21 @@
 }
 .contact-container .contact__touch-content--explanation .touch-text {
   opacity: 0.7;
+}
+@media screen and (max-width: 767px) {
+  .contact-container .contact__touch-content--explanation {
+    margin-top: 1rem;
+    width: 100% !important;
+  }
+  .contact-container .contact__touch-content--explanation h1 {
+    text-align: center;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .contact-container .contact__touch-content--explanation p {
+    text-align: justify;
+  }
 }
 .contact-container .contact__touch-content--explanation form {
   width: 100%;
@@ -110,6 +170,12 @@
 }
 .contact-container .contact__social-media {
   width: 100%;
+}
+@media screen and (max-width: 575px) {
+  .contact-container .contact__social-media ul {
+    padding: 0;
+    margin: 0;
+  }
 }
 .contact-container .contact__social-media ul {
   width: 80%;
