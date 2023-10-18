@@ -1,6 +1,8 @@
-<section class="about-container p-5 d-flex align-items-center flex-column">
+<section
+  class="about-container p-xxl-5 py-md-3 py-0 px-0 d-flex align-items-center flex-column"
+>
   <div
-    class="about__introduction d-flex flex-column justify-content-between align-items-center p-3"
+    class="about__introduction d-flex flex-md-row flex-column justify-content-between align-items-center p-3"
   >
     <div class="about__introduction--image">
       <img
@@ -71,7 +73,7 @@
       {{ getLocalText("skillHeader") }}
     </h1>
     <div
-      class="about__skills-container d-flex flex-wrap flex-column p-3 justify-content-between"
+      class="about__skills-container d-flex flex-wrap flex-md-row flex-column p-3 justify-content-between"
     >
       <div class="about__skills-container-item">
         <h3 ngClass="{{ modeTheme }}--pink-color" class="my-4">
@@ -79,7 +81,7 @@
         </h3>
         <div class="d-flex align-items-end flex-column">
           <div
-            class="skill-item my-2 d-flex align-items-center justify-content-start flex-row"
+            class="skill-item my-2 d-flex align-items-center justify-content-between flex-row"
             *ngFor="let skill of getLocalText('skillSoftwareItem')"
           >
             <h5
@@ -88,13 +90,15 @@
             >
               {{ skill.name }}
             </h5>
-            <div class="skill-item--progress-bar mr-2">
-              <div
-                ngClass="{{ modeTheme }}--bg-blue-color"
-                class="skill-item--progress-bar-filled"
-              ></div>
+            <div class="d-flex align-items-center" id="progress-bar-container">
+              <div class="skill-item--progress-bar mr-2">
+                <div
+                  ngClass="{{ modeTheme }}--bg-blue-color"
+                  class="skill-item--progress-bar-filled"
+                ></div>
+              </div>
+              <p class="skill-item--perc">{{ skill.perc }}</p>
             </div>
-            <p class="skill-item--perc">{{ skill.perc }}</p>
           </div>
         </div>
       </div>
@@ -104,6 +108,7 @@
         </h3>
         <div class="d-flex align-items-end flex-column">
           <div
+            id="pro-lang"
             class="skill-item px-3 my-2 d-flex align-items-center justify-content-start flex-row w-100"
             *ngFor="let skill of getLocalText('skillLanguageItem')"
           >
@@ -115,7 +120,7 @@
             </h5>
             <span>-</span>
             <h5
-              ngClass="{{ modeTheme }}--pink-color"
+              ngClass="{{ modeTheme }}-bg-color"
               class="skill-item--level mx-1"
             >
               {{ skill.level }}
