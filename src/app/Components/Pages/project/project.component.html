@@ -1,4 +1,6 @@
-<div class="projects__information pl-4">
+<div
+  class="projects__information pl-lg-4 pl-0 d-flex flex-column align-items-center align-items-xl-start"
+>
   <h1
     class="projects__information--header"
     ngClass="{{ modeTheme }}--blue-color"
@@ -18,15 +20,15 @@
 </div>
 <div class="projects__slider d-flex align-items-center justify-content-center">
   <p-carousel
-    class="h-100 d-flex align-items-end justify-content-center"
+    class="d-flex align-items-end justify-content-center"
     [value]="projects"
     [numVisible]="3"
     [numScroll]="1"
     [showIndicators]="false"
     [responsiveOptions]="[
-      { breakpoint: '1024px', numVisible: 5, numScroll: 3 },
-      { breakpoint: '768px', numVisible: 5, numScroll: 2 },
-      { breakpoint: '560px', numVisible: 2, numScroll: 1, mouseDraggable: true }
+      { breakpoint: '991px', numVisible: 3, numScroll: 3 },
+      { breakpoint: '767px', numVisible: 2, numScroll: 2 },
+      { breakpoint: '575px', numVisible: 1, numScroll: 1, mouseDraggable: true }
     ]"
   >
     >
