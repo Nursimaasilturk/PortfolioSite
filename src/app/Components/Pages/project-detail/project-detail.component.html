@@ -2,14 +2,20 @@
 <div
   *ngIf="projectDetails"
   id="projects-detail"
-  class="d-flex flex-row align-items-start justify-content-between w-100 h-100"
+  class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start"
 >
+  <div
+    class="w-100 d-flex d-lg-none align-items-center justify-content-between mb-3"
+  >
+    <app-logo></app-logo>
+    <app-mobile-navbar></app-mobile-navbar>
+  </div>
   <div class="projects-detail__image">
     <img [src]="projectDetails.src" [alt]="projectDetails.alt" />
   </div>
   <div class="projects-detail__content d-flex flex-column">
     <app-logo
-      class="w-100 d-flex align-items-center justify-content-end"
+      class="w-100 align-items-center justify-content-end d-none d-lg-flex"
     ></app-logo>
     <p class="projects-detail__content--title">Front-end Developer</p>
     <h1
@@ -23,7 +29,7 @@
       {{ projectDetails.description }}
     </p>
     <ul
-      class="projects-detail__content--tech d-flex align-items-center p-0 my-4 flex-row"
+      class="projects-detail__content--tech d-flex align-items-center p-0 my-xl-4 my-1 flex-row"
     >
       <li
         *ngFor="let tech of projectDetails.usageTech"
@@ -32,8 +38,13 @@
         <i class="fa-brands" [ngClass]="tech.icon"></i>
       </li>
     </ul>
-    <div class="projects-detail__content--buttons m-3">
-      <button class="mx-3" (click)="goToLiveUrl(projectDetails.netlifyUrl)">
+    <div
+      class="projects-detail__content--buttons m-xl-3 mx-0 my-2 d-flex align-items-center justify-content-xl-start"
+    >
+      <button
+        class="mx-xl-3 ml-0 mr-3"
+        (click)="goToLiveUrl(projectDetails.netlifyUrl)"
+      >
         {{ getLocalText("liveBtn") }}
       </button>
       <button
