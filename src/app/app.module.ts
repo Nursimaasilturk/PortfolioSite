@@ -23,6 +23,7 @@ import { FormsModule } from '@angular/forms';
 import { LogoComponent } from './Components/Common/logo/logo.component';
 import { PdfComponent } from './Components/Common/pdf/pdf.component';
 import { DarkLightModeComponent } from './Components/Common/dark-light-mode/dark-light-mode.component';
+import { MobileNavbarComponent } from './Components/Layout/navbar/mobile-navbar/mobile-navbar.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { DarkLightModeComponent } from './Components/Common/dark-light-mode/dark
     LogoComponent,
     PdfComponent,
     DarkLightModeComponent,
+    MobileNavbarComponent,
   ],
   imports: [
     BrowserModule,

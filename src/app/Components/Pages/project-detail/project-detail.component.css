@@ -30,6 +30,18 @@
   background-color: #78f1ff;
 }
 
+#projects-detail {
+  max-width: 1400px;
+  min-height: 500px;
+  max-height: 900px;
+  margin: auto;
+}
+@media screen and (max-width: 991px) {
+  #projects-detail {
+    margin: 0;
+  }
+}
+
 .projects-detail__image {
   width: 45%;
   height: 100%;

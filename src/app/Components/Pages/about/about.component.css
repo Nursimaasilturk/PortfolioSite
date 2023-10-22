@@ -33,6 +33,17 @@
 .about-container {
   width: 90%;
   margin-top: 1rem;
+  max-width: 1200px;
+}
+@media screen and (max-width: 991px) {
+  .about-container {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about-container {
+    margin-top: 0;
+  }
 }
 
 .about__introduction {
@@ -47,7 +58,7 @@
 }
 .about__introduction--image {
   width: 45%;
-  height: 500px;
+  aspect-ratio: 1/1;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 0.3rem;
   overflow: hidden;
@@ -96,6 +107,9 @@
 .about__skills-container-item {
   width: 48%;
 }
+.about__skills-container-item .skill-item {
+  width: 100%;
+}
 .about__skills-container-item .skill-item p,
 .about__skills-container-item .skill-item h5 {
   margin: 0;
@@ -103,9 +117,14 @@
 .about__skills-container-item .skill-item--name {
   opacity: 0.7;
 }
+.about__skills-container-item .skill-item #progress-bar-container {
+  width: 80%;
+}
 .about__skills-container-item .skill-item--progress-bar {
+  width: 100%;
   position: relative;
-  width: 350px;
+  min-width: 240px;
+  max-width: 350px;
   height: 5px;
   background-color: rgb(38, 55, 55);
 }
@@ -120,44 +139,69 @@
   opacity: 0.8;
   font-size: 0.7rem;
 }
-
-@media screen and (max-width: 576px) {
-  .about-container {
+@media screen and (max-width: 1399px) {
+  .about__introduction, .about__experiance, .about__skills {
     width: 100%;
-    margin: 0;
-    padding: 0.5rem !important;
   }
-  .about__introduction {
-    width: 100% !important;
-  }
-  .about__introduction--image, .about__introduction--text {
-    width: 95%;
-  }
+}
+@media screen and (max-width: 767px) {
   .about__introduction--text {
-    margin-top: 1rem;
+    width: 100%;
   }
   .about__introduction--text h1 {
     text-align: center;
   }
-  .about__introduction--text p {
-    text-align: justify;
-  }
-  .about__experiance {
-    margin-top: 0rem !important;
-    margin-bottom: 0rem !important;
-    width: 100%;
-  }
-  .about__skills {
-    width: 100%;
-    margin-top: 0rem;
-  }
   .about__skills-container-item {
     width: 100%;
   }
-  .about__skills-container-item h3 {
-    margin: 0 0 1rem 0 !important;
-  }
   .about__skills-container-item .skill-item--progress-bar {
-    width: 230px !important;
+    max-width: 500px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .about__introduction {
+    background: transparent;
+    box-shadow: none;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+    border: none;
+  }
+  .about__introduction--image {
+    min-width: 300px;
+  }
+  .about__introduction--text {
+    text-align: justify;
+    margin-top: 2rem;
+  }
+  .about__experiance-content {
+    background: transparent;
+    box-shadow: none;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+    border: none;
+  }
+  .about__experiance-content--text {
+    width: 100%;
+  }
+  .about__skills {
+    background: transparent;
+    box-shadow: none;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about__skills-container-item .skill-item {
+    flex-direction: column !important;
+    margin-bottom: 2rem;
+    align-items: baseline !important;
+  }
+  .about__skills-container-item .skill-item #progress-bar-container {
+    width: 100%;
+  }
+  .about__skills-container-item .skill-item#pro-lang {
+    flex-direction: row !important;
   }
 }/*# sourceMappingURL=about.component.css.map */

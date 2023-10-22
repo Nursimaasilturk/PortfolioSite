@@ -1,0 +1,67 @@
+.light-mode--pink-color {
+  color: #ff96a7;
+}
+
+.light-mode--bg-pink-color {
+  background-color: #ff96a7;
+}
+
+.light-mode--blue-color {
+  color: #a5e1e9;
+}
+
+.light-mode--bg-blue-color {
+  background-color: #a5e1e9;
+}
+
+.dark-mode--pink-color {
+  color: #ff3779;
+}
+
+.dark-mode--bg-pink-color {
+  background-color: #ff3779;
+}
+
+.dark-mode--blue-color {
+  color: #78f1ff;
+}
+
+.dark-mode--bg-blue-color {
+  background-color: #78f1ff;
+}
+
+.mobile-navbar i {
+  font-size: 1.5rem;
+  color: #ff3779;
+  cursor: pointer;
+}
+.mobile-navbar i#close-btn {
+  position: absolute;
+  top: 3%;
+  right: 5%;
+  font-size: 1rem;
+}
+.mobile-navbar__menu {
+  padding: 50px 30px;
+  width: 270px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: -270px;
+  z-index: 10;
+  height: 100vh;
+  transition: 0.3s ease-in;
+}
+.mobile-navbar__menu .navbar-links {
+  padding: 0;
+}
+.mobile-navbar__menu .navbar-links li {
+  padding: 0.3rem 0rem;
+}
+.mobile-navbar__menu .navbar-links li a {
+  font-weight: 600;
+  color: #000;
+}
+.mobile-navbar__menu.active {
+  right: 0;
+}/*# sourceMappingURL=mobile-navbar.component.css.map */
