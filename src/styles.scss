@@ -102,6 +102,16 @@ app-project {
   align-items: center;
   padding: 2rem;
   justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  @media screen and (max-width: 1200px) {
+    justify-content: center;
+    align-items: start;
+    height: auto;
+  }
+  @media screen and (max-width: 575px) {
+    padding: 10px;
+  }
 }
 app-project-detail,
 app-project-all {
