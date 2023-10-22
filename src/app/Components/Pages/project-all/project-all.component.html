@@ -4,7 +4,7 @@
 <section class="all">
   <div class="all__filters d-flex align-items-center justify-content-center">
     <ul
-      class="d-flex flex-row px-5 align-items-center justify-content-between m-auto"
+      class="d-flex flex-row px-lg-5 p-0 align-items-center justify-content-between m-auto"
     >
       <li
         class="all__filters--item text-center"
@@ -45,13 +45,11 @@
     </ul>
   </div>
   <div class="all__projects d-flex flex-wrap justify-content-evenly m-auto">
-    <a
-      (click)="redirectToDetail(project.id)"
-      class="all__projects--card m-2"
-      *ngFor="let project of filteredProjects"
-    >
-      <img class="all__projects--card-image" [src]="project.src" alt="" />
-      <h2 class="all__projects--card-title">{{ project.name }}</h2>
-    </a>
+    <div *ngFor="let project of filteredProjects" class="card-item">
+      <a (click)="redirectToDetail(project.id)" class="all__projects--card">
+        <img class="all__projects--card-image" [src]="project.src" alt="" />
+        <h2 class="all__projects--card-title">{{ project.name }}</h2>
+      </a>
+    </div>
   </div>
 </section>

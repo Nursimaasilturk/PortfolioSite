@@ -1,15 +1,24 @@
 @import "../../../../assets/variables.scss";
 
 .all {
-  margin: auto;
+  margin: 3rem auto;
   width: 90%;
-  height: 88%;
+  max-width: 1400px;
   &__filters {
-    height: 10%;
+    height: 70px;
     ul {
       height: 80%;
       width: 80%;
       list-style: none;
+      @media screen and (max-width: 620px) {
+        overflow: scroll;
+        li {
+          margin-left: 1rem;
+        }
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
     }
     &--item {
       padding: 0.4rem 0.9rem;
@@ -26,14 +35,23 @@
   }
   &__projects {
     width: 95%;
-    height: 85%;
     overflow-x: hidden;
+    margin-top: 2rem !important;
     &::-webkit-scrollbar {
       display: none;
     }
+    .card-item {
+      width: 25%;
+      margin-bottom: 1rem;
+      @media screen and (max-width: 991px) {
+        width: 33%;
+      }
+    }
     &--card {
+      margin: auto;
+      display: block;
       position: relative;
-      width: 280px;
+      width: 95%;
       height: 350px;
       border-radius: 0.4rem;
       background-color: aqua;
@@ -47,8 +65,60 @@
       &-title {
         position: absolute;
         bottom: 5%;
-        left: 30%;
+        left: 0;
         color: white;
+        width: 100%;
+        text-align: center;
+        @media screen and (max-width: 767px) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 991px) {
+    width: 95%;
+
+    &__filters {
+      ul {
+        width: 100%;
+      }
+    }
+    &__projects {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    margin: 1rem auto;
+    &__projects {
+      width: 90%;
+      .card-item {
+        width: 50%;
+      }
+    }
+  }
+  @media screen and (max-width: 575px) {
+    margin: 0 auto;
+    &__filters {
+    }
+    &__projects {
+      margin-top: 0.5rem !important;
+      width: 100%;
+      .card-item {
+        width: 50%;
+      }
+    }
+  }
+  @media screen and (max-width: 467px) {
+    &__filters {
+    }
+    &__projects {
+      .card-item {
+        width: 100%;
+        a {
+          width: 300px;
+          height: auto;
+          aspect-ratio: 1 / 1.3;
+        }
       }
     }
   }
