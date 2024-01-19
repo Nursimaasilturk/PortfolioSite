@@ -104,6 +104,7 @@ app-project {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 2rem;
+  
   @media screen and (max-width: 1200px) {
     justify-content: center;
     align-items: start;
@@ -130,6 +131,7 @@ app-project-detail {
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
+  overflow: auto;
   @media screen and (max-width: 991px) {
     padding: 1rem 2rem 2rem 2rem;
   }

@@ -31,18 +31,28 @@
 }
 
 .all {
-  margin: auto;
+  margin: 3rem auto;
   width: 90%;
-  height: 88%;
-  /* From https://css.glass */
+  max-width: 1400px;
 }
 .all__filters {
-  height: 10%;
+  height: 70px;
 }
 .all__filters ul {
   height: 80%;
   width: 80%;
   list-style: none;
+}
+@media screen and (max-width: 620px) {
+  .all__filters ul {
+    overflow: scroll;
+  }
+  .all__filters ul li {
+    margin-left: 1rem;
+  }
+  .all__filters ul::-webkit-scrollbar {
+    display: none;
+  }
 }
 .all__filters--item {
   padding: 0.4rem 0.9rem;
@@ -58,15 +68,26 @@
 }
 .all__projects {
   width: 95%;
-  height: 85%;
   overflow-x: hidden;
+  margin-top: 2rem !important;
 }
 .all__projects::-webkit-scrollbar {
   display: none;
 }
+.all__projects .card-item {
+  width: 25%;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 991px) {
+  .all__projects .card-item {
+    width: 33%;
+  }
+}
 .all__projects--card {
+  margin: auto;
+  display: block;
   position: relative;
-  width: 280px;
+  width: 95%;
   height: 350px;
   border-radius: 0.4rem;
   background-color: aqua;
@@ -82,8 +103,59 @@
 .all__projects--card-title {
   position: absolute;
   bottom: 5%;
-  left: 30%;
+  left: 0;
   color: white;
+  width: 100%;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .all__projects--card-title {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .all {
+    width: 95%;
+  }
+  .all__filters ul {
+    width: 100%;
+  }
+  .all__projects {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .all {
+    margin: 1rem auto;
+  }
+  .all__projects {
+    width: 90%;
+  }
+  .all__projects .card-item {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .all {
+    margin: 0 auto;
+  }
+  .all__projects {
+    margin-top: 0.5rem !important;
+    width: 100%;
+  }
+  .all__projects .card-item {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 467px) {
+  .all__projects .card-item {
+    width: 100%;
+  }
+  .all__projects .card-item a {
+    width: 300px;
+    height: auto;
+    aspect-ratio: 1/1.3;
+  }
 }
 
 .html-css {

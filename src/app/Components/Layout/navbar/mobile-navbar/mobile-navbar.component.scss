@@ -14,20 +14,30 @@
   &__menu {
     padding: 50px 30px;
     width: 270px;
-    background-color: white;
     position: fixed;
     top: 0;
     right: -270px;
     z-index: 10;
     height: 100vh;
     transition: 0.3s ease-in;
+    background: rgba(2, 6, 23, 0.7);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.9px);
+    -webkit-backdrop-filter: blur(10.9px);
+    border: 1px solid rgba(2, 6, 23, 1);
+    .mobile-height {
+      max-height: 90%;
+    }  
     .navbar-links {
       padding: 0;
+      list-style: none;
       li {
         padding: 0.3rem 0rem;
         a {
           font-weight: 600;
-          color: #000;
+          color:$light-mode-bg--color;
         }
       }
     }
