@@ -1,15 +1,12 @@
 @import "../../../../assets/variables.scss";
 
 .lang-dropdown {
-  /* From https://css.glass */
-  /* From https://css.glass */
-  background: rgba(23, 25, 58, 0.43);
+  background-color: $dark-mode-bg--color;
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(9.1px);
   -webkit-backdrop-filter: blur(9.1px);
-  border: 1px solid rgba(23, 25, 58, 0.3);
-  outline: 1px solid $dark-mode-blue--color;
+  border: 1px solid $dark-mode-blue--color;
   border-radius: 0.3rem;
   border-radius: 0.4rem;
   width: 70px;
@@ -62,6 +59,9 @@
       padding: 0;
       color: $dark-mode-blue--color;
     }
+  }
+  &.light-mode{
+    border: 1px solid transparent;
   }
 }
 .slide-up {

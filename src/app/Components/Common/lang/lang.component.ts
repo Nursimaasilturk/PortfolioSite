@@ -8,13 +8,16 @@ import { GlobalService } from 'src/app/global.service';
 })
 export class LangComponent implements OnInit {
   selectedLangOption: string = 'EN';
-  selectedTheme: any = {};
+  modeTheme ?: string;
   constructor(private globalService: GlobalService) {}
 
   ngOnInit(): void {
     this.globalService.selectedLang$.subscribe((value) => {
       this.selectedLangOption = value;
     });
+    this.globalService.selectedTheme$.subscribe((value)=>{
+      this.modeTheme= value;
+    })
   }
 
   onUpButtonClicked(): void {

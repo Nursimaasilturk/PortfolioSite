@@ -10,6 +10,24 @@ body {
   font-family: $main-font-family;
   color: white;
   overflow: auto;
+  &.light-mode{
+    background-image: url('./assets/img/light.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    app-logo{
+      text-shadow: none !important;
+    }
+    app-project-detail,app-project-all {
+      background-color: rgb(232, 216, 232);
+    }
+  }
+  &.dark-mode{
+    background-image: url('./assets/img/dark.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
 }
 
 //Costom CSS General
@@ -33,10 +51,6 @@ i.fa-bootstrap {
 }
 //
 app-root {
-  // background-image: url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-  background-image: url("https://images.unsplash.com/photo-1510906594845-bc082582c8cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1144&q=80");
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -73,8 +87,7 @@ app-logo {
   color: $dark-mode-pink--color;
   text-shadow: 0px 11px 10px rgba(123, 7, 92, 0.8);
 }
-app-dark-light-mode {
-}
+
 // Pages
 app-contact,
 app-about {

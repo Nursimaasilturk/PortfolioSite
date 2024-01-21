@@ -1,4 +1,4 @@
-<div class="toggleWrapper">
+<div class="dark-light-mode d-flex">
   <input
     type="checkbox"
     class="dn"
@@ -6,17 +6,9 @@
     [(ngModel)]="isChecked"
     (ngModelChange)="isToggleTheme()"
   />
-  <label for="dn" class="toggle">
-    <span class="toggle__handler">
-      <span class="crater crater--1"></span>
-      <span class="crater crater--2"></span>
-      <span class="crater crater--3"></span>
-    </span>
-    <span class="star star--1"></span>
-    <span class="star star--2"></span>
-    <span class="star star--3"></span>
-    <span class="star star--4"></span>
-    <span class="star star--5"></span>
-    <span class="star star--6"></span>
-  </label>
+  <div class="dark-light-mode-frame d-flex align-items-center justify-content-between">
+    <i class="fa-solid fa-moon"></i>
+    <i class="fa-regular fa-sun"></i>
+    <div class="dark-light-mode-frame--ball" [ngClass]="!isChecked ? 'active' : ' ' "></div>
+  </div>
 </div>

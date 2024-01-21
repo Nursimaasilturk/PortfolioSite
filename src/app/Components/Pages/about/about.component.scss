@@ -10,6 +10,16 @@
   @media screen and (max-width: 767px) {
     margin-top: 0;
   }
+  &.light-mode{
+    .about__introduction,.about__experience-content,.about__skills{
+      background: rgba(2, 6, 23, 0.13);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(9.6px);
+      -webkit-backdrop-filter: blur(9.6px);
+      border: 1px solid rgba(2, 6, 23, 0.02);
+    }
+  }
 }
 .about {
   &__introduction {
@@ -36,7 +46,7 @@
       width: 50%;
     }
   }
-  &__experiance {
+  &__experience {
     width: 90%;
     &-content {
       width: 100%;

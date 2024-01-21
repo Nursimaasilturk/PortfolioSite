@@ -14,6 +14,7 @@ export class PdfComponent implements OnInit {
   langTextPage: any;
   langTextFunc: any;
   pdfPath: any;
+  modeTheme?: string;
   constructor(
     private gService: GlobalService,
     private http: HttpClient,
@@ -31,6 +32,9 @@ export class PdfComponent implements OnInit {
       this.pdfPath = this.getPdfUrl();
     });
     this.langTextPage = this.pService.getLangItemByPage('navbar');
+    this.gService.selectedTheme$.subscribe((value)=>{
+      this.modeTheme= value;
+    })
   }
   getLocalText(key: any) {
     return this.data != undefined
